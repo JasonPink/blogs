@@ -1,5 +1,5 @@
 module.exports = {
-  title: "springleo's blog",
+  title: "jasonpink's blog",
   base: "/blogs/",
   head: [
     [
@@ -29,22 +29,21 @@ module.exports = {
   theme: "vuesax",
   nav: [
     { text: "首页", link: "/" },
-    {
-      text: "codinglin 的博客",
-      items: [
-        { text: "掘金", link: "https://juejin.cn/user/726107228492253" },
-        { text: "Github", link: "https://github.com/coding-lin" },
-      ],
-    },
+    // {
+    //   text: "codinglin 的博客",
+    //   items: [
+    //     { text: "掘金", link: "https://juejin.cn/user/726107228492253" },
+    //     { text: "Github", link: "https://github.com/coding-lin" },
+    //   ],
+    // },
   ],
   themeConfig: {
     backToTop: true,
     sidebarDepth: 0,
-    repo: "https://github.com/lq782655835/blogs",
-    docsRepo: "https://github.com/lq782655835/blogs",
+    // repo: "https://github.com/lq782655835/blogs",
+    // docsRepo: "https://github.com/lq782655835/blogs",
     docsDir: "docs",
     docsBranch: "master",
-
     sidebar: [
       {
         title: "欢迎学习",
@@ -53,12 +52,33 @@ module.exports = {
         children: [{ title: "博客简介", path: "/" }],
       },
       {
-        title: "基础篇",
-        path: "/handbook/1",
+        title: "JS",
+        path: "/javascript/1",
         collapsable: true,
         children: [
-          { title: "第一篇", path: "/handbook/1" },
-          { title: "第二篇", path: "/handbook/2" },
+          {
+            title: "for...in与for...of",
+            path: "/javascript/for...in与for...of",
+          },
+          { title: "第二篇", path: "/javascript/2" },
+        ],
+      },
+      {
+        title: "Vue",
+        path: "/javascript/1",
+        collapsable: true,
+        children: [
+          { title: "第一篇", path: "/javascript/1" },
+          { title: "第二篇", path: "/javascript/2" },
+        ],
+      },
+      {
+        title: "React",
+        path: "/javascript/1",
+        collapsable: true,
+        children: [
+          { title: "第一篇", path: "/javascript/1" },
+          { title: "第二篇", path: "/javascript/2" },
         ],
       },
     ],
