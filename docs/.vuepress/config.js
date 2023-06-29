@@ -63,24 +63,24 @@ module.exports = {
           { title: "第二篇", path: "/javascript/2" },
         ],
       },
-      {
-        title: "Vue",
-        path: "/javascript/1",
-        collapsable: true,
-        children: [
-          { title: "第一篇", path: "/javascript/1" },
-          { title: "第二篇", path: "/javascript/2" },
-        ],
-      },
-      {
-        title: "React",
-        path: "/javascript/1",
-        collapsable: true,
-        children: [
-          { title: "第一篇", path: "/javascript/1" },
-          { title: "第二篇", path: "/javascript/2" },
-        ],
-      },
+      // {
+      //   title: "Vue",
+      //   path: "/javascript/1",
+      //   collapsable: true,
+      //   children: [
+      //     { title: "第一篇", path: "/javascript/1" },
+      //     { title: "第二篇", path: "/javascript/2" },
+      //   ],
+      // },
+      // {
+      //   title: "React",
+      //   path: "/javascript/1",
+      //   collapsable: true,
+      //   children: [
+      //     { title: "第一篇", path: "/javascript/1" },
+      //     { title: "第二篇", path: "/javascript/2" },
+      //   ],
+      // },
     ],
     lastUpdated: "最后更新时间",
   },
