@@ -27,16 +27,7 @@ module.exports = {
     ["@vuepress/google-analytics", { ga: "UA-154622307-1" }],
   ],
   theme: "vuesax",
-  nav: [
-    { text: "首页", link: "/" },
-    // {
-    //   text: "codinglin 的博客",
-    //   items: [
-    //     { text: "掘金", link: "https://juejin.cn/user/726107228492253" },
-    //     { text: "Github", link: "https://github.com/coding-lin" },
-    //   ],
-    // },
-  ],
+  nav: [{ text: "首页", link: "/" }],
   themeConfig: {
     backToTop: true,
     sidebarDepth: 0,
@@ -46,12 +37,6 @@ module.exports = {
     docsBranch: "master",
     sidebar: [
       {
-        title: "欢迎学习",
-        path: "/",
-        collapsable: false, // 是否折叠
-        children: [{ title: "博客简介", path: "/" }],
-      },
-      {
         title: "JS",
         path: "/javascript/1",
         collapsable: true,
@@ -60,7 +45,16 @@ module.exports = {
             title: "for...in与for...of",
             path: "/javascript/for...in与for...of",
           },
-          { title: "第二篇", path: "/javascript/2" },
+        ],
+      },
+      {
+        title: "读书笔记",
+        path: "/booknote/CSS揭秘",
+        children: [
+          {
+            title: "《CSS揭秘》",
+            path: "/booknote/CSS揭秘",
+          },
         ],
       },
       // {
