@@ -45,6 +45,14 @@ module.exports = {
             title: "for...in与for...of",
             path: "/javascript/for...in与for...of",
           },
+          {
+            title: "Eslint+Prettier",
+            path: "/javascript/Eslint+Prettier",
+          },
+          {
+            title: "hash与history模式",
+            path: "/javascript/hash与history模式",
+          },
         ],
       },
       {
@@ -54,6 +62,10 @@ module.exports = {
           {
             title: "《CSS揭秘》",
             path: "/booknote/CSS揭秘",
+          },
+          {
+            title: "《CSS世界》",
+            path: "/booknote/CSS世界",
           },
         ],
       },
