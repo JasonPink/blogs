@@ -18,7 +18,6 @@ module.exports = {
       "(function(h,o,t,j,a,r){\n                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};\n                h._hjSettings={hjid:1650620,hjsv:6};\n                a=o.getElementsByTagName('head')[0];\n                r=o.createElement('script');r.async=1;\n                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;\n                a.appendChild(r);\n            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');",
     ],
   ],
-  base: "/blogs/",
   plugins: [
     "@vuepress/medium-zoom",
     ["code-copy", true],
@@ -42,17 +41,50 @@ module.exports = {
         collapsable: true,
         children: [
           {
+            title: "0.1+0.2",
+            path: "/javascript/0.1+0.2",
+          },
+          {
+            title: "ES6解构的本质",
+            path: "/javascript/ES6解构的本质",
+          },
+          {
             title: "for...in与for...of",
             path: "/javascript/for...in与for...of",
           },
-          {
-            title: "Eslint+Prettier",
-            path: "/javascript/Eslint+Prettier",
-          },
+
           {
             title: "hash与history模式",
             path: "/javascript/hash与history模式",
           },
+        ],
+      },
+      {
+        title: "团队规范",
+        path: "/team/Eslint+Prettier",
+        collapsable: true,
+        children: [
+          {
+            title: "Eslint+Prettier",
+            path: "/team/Eslint+Prettier",
+          },
+        ],
+      },
+      {
+        title: "Vue",
+        path: "/vue/nextTick",
+        collapsable: true,
+        children: [{ title: "nextTick原理", path: "/vue/nextTick" }],
+      },
+      {
+        title: "React",
+        path: "/react/redux",
+        collapsable: true,
+        children: [
+          { title: "useCallback", path: "/react/useCallback与useMemo" },
+          { title: "常见问题", path: "/react/1" },
+          { title: "Redux", path: "/react/redux" },
+          { title: "ref", path: "/react/ref" },
         ],
       },
       {
@@ -69,24 +101,6 @@ module.exports = {
           },
         ],
       },
-      // {
-      //   title: "Vue",
-      //   path: "/javascript/1",
-      //   collapsable: true,
-      //   children: [
-      //     { title: "第一篇", path: "/javascript/1" },
-      //     { title: "第二篇", path: "/javascript/2" },
-      //   ],
-      // },
-      // {
-      //   title: "React",
-      //   path: "/javascript/1",
-      //   collapsable: true,
-      //   children: [
-      //     { title: "第一篇", path: "/javascript/1" },
-      //     { title: "第二篇", path: "/javascript/2" },
-      //   ],
-      // },
     ],
     lastUpdated: "最后更新时间",
   },
