@@ -81,10 +81,11 @@ module.exports = {
         path: "/react/redux",
         collapsable: true,
         children: [
+          { title: "ref", path: "/react/ref" },
           { title: "useCallback", path: "/react/useCallback与useMemo" },
+          { title: "高阶组件HOC", path: "/react/高阶组件HOC" },
           { title: "常见问题", path: "/react/1" },
           { title: "Redux", path: "/react/redux" },
-          { title: "ref", path: "/react/ref" },
         ],
       },
       {
