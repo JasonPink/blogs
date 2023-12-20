@@ -52,10 +52,13 @@ module.exports = {
             title: "for...in与for...of",
             path: "/javascript/for...in与for...of",
           },
-
           {
             title: "hash与history模式",
             path: "/javascript/hash与history模式",
+          },
+          {
+            title: "代码片段",
+            path: "/javascript/常用代码片段",
           },
         ],
       },
