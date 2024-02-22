@@ -36,13 +36,40 @@ module.exports = {
     docsBranch: "master",
     sidebar: [
       {
+        title: "开发规范",
+        path: "/team/Eslint+Prettier",
+        collapsable: true,
+        children: [
+          {
+            title: "Git规范",
+            path: "/team/git",
+          },
+          {
+            title: "Vue规范",
+            path: "/team/vue",
+          },
+          {
+            title: "Eslint+Prettier",
+            path: "/team/eslint-prettier",
+          },
+          {
+            title: "Javascript风格指南",
+            path: "/team/js-style-guide",
+          },
+        ],
+      },
+      {
         title: "JS",
         path: "/javascript/1",
         collapsable: true,
         children: [
           {
-            title: "0.1+0.2",
+            title: "0.1+0.2 !== 0.3",
             path: "/javascript/0.1+0.2",
+          },
+          {
+            title: "Promise",
+            path: "/javascript/Promise",
           },
           {
             title: "ES6解构的本质",
@@ -59,17 +86,6 @@ module.exports = {
           {
             title: "代码片段",
             path: "/javascript/常用代码片段",
-          },
-        ],
-      },
-      {
-        title: "团队规范",
-        path: "/team/Eslint+Prettier",
-        collapsable: true,
-        children: [
-          {
-            title: "Eslint+Prettier",
-            path: "/team/Eslint+Prettier",
           },
         ],
       },
