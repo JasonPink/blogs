@@ -1,3 +1,5 @@
+# eslint 与 prettier
+
 ## VSCode 安装插件
 
 - ESLint VSCode 插件， 主要的作用是会将有错的地方进行标记，方便我们知道哪些文件、哪些代码是有问题的

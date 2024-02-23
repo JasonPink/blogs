@@ -59,6 +59,21 @@ module.exports = {
         ],
       },
       {
+        title: "Project",
+        path: "/project/performance",
+        collapsable: true,
+        children: [
+          {
+            title: "http协议",
+            path: "/project/http",
+          },
+          {
+            title: "前端性能优化",
+            path: "/project/performance",
+          },
+        ],
+      },
+      {
         title: "JS",
         path: "/javascript/1",
         collapsable: true,
@@ -68,8 +83,20 @@ module.exports = {
             path: "/javascript/0.1+0.2",
           },
           {
+            title: "Commonjs",
+            path: "/javascript/commonjs",
+          },
+          {
             title: "Promise",
             path: "/javascript/Promise",
+          },
+          {
+            title: "JavaScript中的继承",
+            path: "/javascript/inherit",
+          },
+          {
+            title: "JavaScript中的执行上下文",
+            path: "/javascript/context",
           },
           {
             title: "ES6解构的本质",
@@ -82,6 +109,18 @@ module.exports = {
           {
             title: "hash与history模式",
             path: "/javascript/hash与history模式",
+          },
+          {
+            title: "事件循环机制",
+            path: "/javascript/eventloop",
+          },
+          {
+            title: "输入url发生了什么",
+            path: "/javascript/url",
+          },
+          {
+            title: "浏览器缓存机制",
+            path: "/javascript/cache",
           },
           {
             title: "代码片段",
