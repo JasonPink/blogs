@@ -74,6 +74,17 @@ module.exports = {
         ],
       },
       {
+        title: "CSS",
+        path: "/CSS/block",
+        collapsable: true,
+        children: [
+          {
+            title: "你不知道的包含块",
+            path: "/css/block",
+          },
+        ],
+      },
+      {
         title: "JS",
         path: "/javascript/1",
         collapsable: true,
@@ -117,6 +128,10 @@ module.exports = {
           {
             title: "输入url发生了什么",
             path: "/javascript/url",
+          },
+          {
+            title: "浏览器如何渲染页面",
+            path: "/javascript/browser",
           },
           {
             title: "浏览器缓存机制",
