@@ -79,6 +79,18 @@ module.exports = {
         collapsable: true,
         children: [
           {
+            title: "BFC",
+            path: "/css/bfc",
+          },
+          {
+            title: "flex布局最后一行左对齐方案",
+            path: "/css/flex-left-end",
+          },
+          {
+            title: "层叠上下文",
+            path: "/css/stacking-context",
+          },
+          {
             title: "你不知道的包含块",
             path: "/css/block",
           },
@@ -138,8 +150,8 @@ module.exports = {
             path: "/javascript/cache",
           },
           {
-            title: "代码片段",
-            path: "/javascript/常用代码片段",
+            title: "常用代码片段",
+            path: "/javascript/use-code",
           },
         ],
       },
