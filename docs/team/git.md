@@ -118,3 +118,57 @@ list-staged 主要配合 linter 用来格式化代码（统一的代码风格）
   "standard-version": {}
 }
 ```
+
+### husky 新版配置
+
+安装新版 husky: **yarn add -D husky**
+
+然后执行 husky 命令行工具，启用 git hook:**npx husky install**
+
+该命令会在当前项目中创建一个 .husky 目录，用来存放我们 git hook 脚本
+
+执行**git config --local --list** ,可以看到当前 git 项目的本地配置有：core.hookspath=.husky
+
+其他同事拉取项目时，他们可能会忘记执行上面的命令启用 git hook。但有一个命令他们是一定会执行的，就是执行 npm install 或 yarn 去安装依赖。于是我们需要利用 npm script 的生命周期脚本，加上一个 prepare。prepare 会在 install 之后执行。
+
+```
+// package.json
+{
+  "scripts": {
+   // ...
+    "prepare": "husky install"
+  }
+}
+```
+
+这样就能保证新同事拉项目并安装依赖后，husky 被启用。
+
+创建 hook
+
+```
+
+npx husky add .husky/pre-commit "npm test"
+
+echo "npm test" > .husky/pre-commit // 最新版 v9.0.11 使用这种方式创建
+```
+
+现在我们添加两个 hook
+
+```
+
+echo "npx --no -- commitlint --edit \$1" > .husky/commit-msg
+echo "npm run lint-staged" > .husky/pre-commit
+```
+
+成功后可以在.husky 目录下看到两个对应的脚本文件
+![husky 目录](../assets/husky.jpg "husky目录")
+
+测试一下效果
+
+提交不规范的 commit 信息
+
+![commintlint](../assets/commitlint.jpg "commintlint")
+
+提交未通过 eslint 校验的文件
+
+![eslint](../assets/eslint.jpg "eslint")

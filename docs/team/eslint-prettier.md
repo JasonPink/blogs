@@ -9,6 +9,8 @@
 
 ## 安装 ESlint
 
+tips: 遇到一个问题，vscode 不显示语法错误，控制台有错误信息，折腾了很久，才发现是 vscode 版本跟 eslint 版本冲突，升级 vscode 版本就解决了
+
 ```
 # 全局安装 ESLint
 $ npm install -g eslint
@@ -137,19 +139,19 @@ npx prettier --write . #格式化所有文件
 
 ```
 module.exports = {
-	printWidth: 80, // 80 每行代码长度
-    tabWidth: 2, // 2 每个 tab 相当于多少个空格
-    useTabs: true, // false 是否使用 tab 进行缩进
-    singleQuote: true, // false 使用单引号
-    semi: false, // true 声明结尾使用分号
-    trailingComma: 'none', // none 多行抵用拖尾逗号
-    bracketSpacing: true, // true 对象字面量的大括号间使用空格
-    jsxSingleQuote: false,
-    jsxBracketSameLine: false, // false 多行 jsx 中的 > 放在最后一行，而不是另起一行
-    arrowParens: 'avoid', // avoid 只有一个参数是否带圆括号
-    vueIndentScriptAndStyle: true, // vue文件的script标签和Style标签下的内容需要缩进
-    singleAttributePerLine: false, // 在 HTML、Vue 和 JSX 中每行强制执行单个属性
-    embeddedLanguageFormatting: 'auto', // 控制 Prettier 是否格式化文件中嵌入的引用代码
+  printWidth: 80, // 80 每行代码长度
+  tabWidth: 2, // 每个 tab 相当于多少个空格
+  useTabs: false, // 是否使用 tab 进行缩进
+  singleQuote: true, // 是否使用单引号
+  semi: true, // 声明结尾使用分号
+  trailingComma: 'none', // 对象尾逗号
+  bracketSpacing: true, // 对象字面量的大括号间使用空格
+  jsxSingleQuote: false,
+  jsxBracketSameLine: false, // false 多行 jsx 中的 > 放在最后一行，而不是另起一行
+  arrowParens: 'avoid', // avoid 只有一个参数是否带圆括号
+  vueIndentScriptAndStyle: true, // vue文件的script标签和Style标签下的内容需要缩进
+  singleAttributePerLine: false, // 在 HTML、Vue 和 JSX 中每行强制执行单个属性
+  embeddedLanguageFormatting: 'auto' // 控制 Prettier 是否格式化文件中嵌入的引用代码
 };
 
 ```
