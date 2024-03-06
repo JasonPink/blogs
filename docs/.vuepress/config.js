@@ -159,7 +159,10 @@ module.exports = {
         title: "Vue",
         path: "/vue/nextTick",
         collapsable: true,
-        children: [{ title: "nextTick原理", path: "/vue/nextTick" }],
+        children: [
+          { title: "nextTick原理", path: "/vue/nextTick" },
+          { title: "diff算法解析", path: "/vue/diff" },
+        ],
       },
       {
         title: "React",
