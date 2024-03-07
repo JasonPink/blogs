@@ -126,6 +126,10 @@ module.exports = {
             path: "/javascript/ES6解构的本质",
           },
           {
+            title: "防抖与节流",
+            path: "/javascript/debounce",
+          },
+          {
             title: "for...in与for...of",
             path: "/javascript/for...in与for...of",
           },
@@ -160,8 +164,9 @@ module.exports = {
         path: "/vue/nextTick",
         collapsable: true,
         children: [
-          { title: "nextTick原理", path: "/vue/nextTick" },
           { title: "diff算法解析", path: "/vue/diff" },
+          { title: "v-model原理", path: "/vue/v-model" },
+          { title: "nextTick原理", path: "/vue/nextTick" },
         ],
       },
       {
