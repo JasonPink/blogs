@@ -164,6 +164,7 @@ module.exports = {
         path: "/vue/nextTick",
         collapsable: true,
         children: [
+          { title: "响应式原理", path: "/vue/reactive" },
           { title: "diff算法解析", path: "/vue/diff" },
           { title: "v-model原理", path: "/vue/v-model" },
           { title: "nextTick原理", path: "/vue/nextTick" },

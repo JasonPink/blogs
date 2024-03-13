@@ -2,7 +2,7 @@
 
 ## JavaScript
 
-1.下载 excel、word、ppt 等浏览器不会默认执行预览的文件
+- 下载 excel、word、ppt 等浏览器不会默认执行预览的文件
 
 ```
 function download(link, name) {
@@ -20,7 +20,7 @@ function download(link, name) {
 download('http://111.229.14.189/file/1.xlsx')
 ```
 
-2. url 参数解析
+- url 参数解析
 
 ```
 function getQueryParam(name) {
@@ -31,7 +31,7 @@ function getQueryParam(name) {
 
 ## CSS
 
-1. 滚动条样式
+- 滚动条样式
 
 ```
 ::-webkit-scrollbar {
@@ -59,7 +59,7 @@ function getQueryParam(name) {
 }
 ```
 
-2. 自定义选中文本颜色
+- 自定义选中文本颜色
 
 ```
 ::selection {
@@ -73,7 +73,7 @@ function getQueryParam(name) {
 }
 ```
 
-3. 文本溢出省略号
+- 文本溢出省略号
 
 ```
 // 单行文本
@@ -94,4 +94,115 @@ function getQueryParam(name) {
   -webkit-line-clamp: $line;
   -webkit-box-orient: vertical;
 }
+```
+
+## Vue
+
+- echart 组件封装
+
+```
+<template>
+	<div class="chart-card">
+		<div ref="chartRef" :style="{ height: currentHeight + 'px' }"></div>
+	</div>
+</template>
+<script setup>
+	import {
+		ref,
+		onMounted,
+		onBeforeUnmount,
+		markRaw,
+		watch,
+		computed
+	} from "vue";
+	import ResizeObserver from "resize-observer-polyfill";
+
+	import { useDebounceFn } from "@vueuse/core";
+	import _ from "lodash";
+	import createDefaultOptions from "./defaultOptions";
+
+	const props = defineProps({
+		fullOptions: {
+			type: Object,
+			default: () => {},
+			required: true
+		},
+		height: {
+			type: String,
+			default: () => 500
+		}
+	});
+
+	const chartRef = ref(null);
+	const currentHeight = computed(() => props.height);
+	const chartInstance = ref(null); // 当前dom节点挂载的echarts实例
+
+	const robserver = new ResizeObserver(entries => {
+		requestAnimationFrame(() => {
+			debouncedResize();
+		});
+	});
+
+	function chartResize() {
+		robserver.observe(chartRef.value);
+	}
+
+	const draw = () => {
+		if (chartInstance.value) {
+			const allOptions = _.merge(createDefaultOptions(), props.fullOptions);
+			console.log("完整图表配置", allOptions);
+			chartInstance.value.setOption(allOptions, { notMerge: true });
+		}
+	};
+
+	const resize = () => {
+		if (chartInstance.value) {
+			chartInstance.value.resize({ animation: { duration: 300 } });
+		}
+	};
+
+	const debouncedResize = useDebounceFn(resize, 300, { maxWait: 800 });
+
+	const init = () => {
+		if (!chartRef.value) return;
+
+		chartInstance.value = echarts.getInstanceByDom(chartRef.value);
+		if (!chartInstance.value) {
+			chartInstance.value = markRaw(
+				echarts.init(chartRef.value, null, {
+					renderer: "svg"
+				})
+			);
+
+			draw();
+		}
+	};
+
+	watch(
+		() => props.fullOptions,
+		newVal => {
+			console.log("图表配置变化！！！", newVal);
+			draw();
+		}
+	);
+
+	onMounted(() => {
+		init();
+		chartResize();
+	});
+
+	onBeforeUnmount(() => {
+		chartInstance.value?.dispose();
+	});
+
+	defineExpose({
+		resize
+	});
+</script>
+<style scoped lang="scss">
+	.draggle-card {
+		padding-bottom: 20px;
+	}
+</style>
+
 ```
