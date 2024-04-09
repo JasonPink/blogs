@@ -71,6 +71,10 @@ module.exports = {
             title: "前端性能优化",
             path: "/project/performance",
           },
+          {
+            title: "微前端实践",
+            path: "/project/qiankun",
+          },
         ],
       },
       {

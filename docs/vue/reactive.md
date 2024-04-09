@@ -140,4 +140,6 @@ vue._data.text = '123'; // in watcher update /n in get
 
 ![响应式数据](../assets/reactive.png "响应式数据")
 
-## Proxy
+### 参考文章
+
+[响应式原理](https://ustbhuangyi.github.io/vue-analysis/v2/reactive/)
