@@ -75,6 +75,14 @@ module.exports = {
             title: "微前端实践",
             path: "/project/qiankun",
           },
+          {
+            title: "webpack",
+            path: "/project/webpack",
+          },
+          {
+            title: "IntersectionObserver",
+            path: "/project/IntersectionObserver",
+          },
         ],
       },
       {
