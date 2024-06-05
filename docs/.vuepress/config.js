@@ -172,6 +172,12 @@ module.exports = {
         ],
       },
       {
+        title: "前端工程化",
+        path: "/engineer/deploy",
+        collapsable: true,
+        children: [{ title: "node发布脚本", path: "/engineer/deploy" }],
+      },
+      {
         title: "Vue",
         path: "/vue/nextTick",
         collapsable: true,
