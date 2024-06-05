@@ -175,7 +175,10 @@ module.exports = {
         title: "前端工程化",
         path: "/engineer/deploy",
         collapsable: true,
-        children: [{ title: "node发布脚本", path: "/engineer/deploy" }],
+        children: [
+          { title: "node发布脚本", path: "/engineer/deploy" },
+          { title: "github aciton", path: "/engineer/action" },
+        ],
       },
       {
         title: "Vue",
