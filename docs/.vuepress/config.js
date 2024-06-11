@@ -118,6 +118,10 @@ module.exports = {
             path: "/javascript/0.1+0.2",
           },
           {
+            title: "async与defer",
+            path: "/javascript/async-defer",
+          },
+          {
             title: "Commonjs",
             path: "/javascript/commonjs",
           },
