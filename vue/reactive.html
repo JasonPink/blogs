@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>响应式原理 | jasonpink&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blogs/favicon.ico">
+    <script>(function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:1650620,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');</script>
+    <meta name="description" content="">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    
+    <link rel="preload" href="/blogs/assets/css/0.styles.f48c9532.css" as="style"><link rel="preload" href="/blogs/assets/js/app.d6da1c5f.js" as="script"><link rel="preload" href="/blogs/assets/js/6.b1c09f51.js" as="script"><link rel="preload" href="/blogs/assets/js/1.f49fca97.js" as="script"><link rel="preload" href="/blogs/assets/js/45.70d0d91d.js" as="script"><link rel="prefetch" href="/blogs/assets/js/10.1caeef65.js"><link rel="prefetch" href="/blogs/assets/js/11.9684e612.js"><link rel="prefetch" href="/blogs/assets/js/12.652283bc.js"><link rel="prefetch" href="/blogs/assets/js/13.23717e8d.js"><link rel="prefetch" href="/blogs/assets/js/14.502c8ebe.js"><link rel="prefetch" href="/blogs/assets/js/15.73b0f3ca.js"><link rel="prefetch" href="/blogs/assets/js/16.28fb8d21.js"><link rel="prefetch" href="/blogs/assets/js/17.96d30e1e.js"><link rel="prefetch" href="/blogs/assets/js/18.d08d1299.js"><link rel="prefetch" href="/blogs/assets/js/19.135a28aa.js"><link rel="prefetch" href="/blogs/assets/js/2.32dd7b9e.js"><link rel="prefetch" href="/blogs/assets/js/20.4db65339.js"><link rel="prefetch" href="/blogs/assets/js/21.33c6accf.js"><link rel="prefetch" href="/blogs/assets/js/22.c5844ee4.js"><link rel="prefetch" href="/blogs/assets/js/23.e45b7b3c.js"><link rel="prefetch" href="/blogs/assets/js/24.38316e94.js"><link rel="prefetch" href="/blogs/assets/js/25.5d8923b7.js"><link rel="prefetch" href="/blogs/assets/js/26.8c94239f.js"><link rel="prefetch" href="/blogs/assets/js/27.bdc48b62.js"><link rel="prefetch" href="/blogs/assets/js/28.d696023b.js"><link rel="prefetch" href="/blogs/assets/js/29.5af9e068.js"><link rel="prefetch" href="/blogs/assets/js/30.21db81c7.js"><link rel="prefetch" href="/blogs/assets/js/31.91794a33.js"><link rel="prefetch" href="/blogs/assets/js/32.431f50e3.js"><link rel="prefetch" href="/blogs/assets/js/33.42d8deb9.js"><link rel="prefetch" href="/blogs/assets/js/34.bf85ef65.js"><link rel="prefetch" href="/blogs/assets/js/35.2c3371d6.js"><link rel="prefetch" href="/blogs/assets/js/36.58fd4836.js"><link rel="prefetch" href="/blogs/assets/js/37.802914e6.js"><link rel="prefetch" href="/blogs/assets/js/38.84489525.js"><link rel="prefetch" href="/blogs/assets/js/39.d219fd7b.js"><link rel="prefetch" href="/blogs/assets/js/40.95fbe5e8.js"><link rel="prefetch" href="/blogs/assets/js/41.0e6cae84.js"><link rel="prefetch" href="/blogs/assets/js/42.037f9d3f.js"><link rel="prefetch" href="/blogs/assets/js/43.3cccb481.js"><link rel="prefetch" href="/blogs/assets/js/44.34b06605.js"><link rel="prefetch" href="/blogs/assets/js/46.99340343.js"><link rel="prefetch" href="/blogs/assets/js/47.7dd51c87.js"><link rel="prefetch" href="/blogs/assets/js/48.e7ca951d.js"><link rel="prefetch" href="/blogs/assets/js/49.00a45625.js"><link rel="prefetch" href="/blogs/assets/js/50.05ccf665.js"><link rel="prefetch" href="/blogs/assets/js/51.c0ce1543.js"><link rel="prefetch" href="/blogs/assets/js/52.2450d87c.js"><link rel="prefetch" href="/blogs/assets/js/53.6a957d36.js"><link rel="prefetch" href="/blogs/assets/js/54.8dbdf14d.js"><link rel="prefetch" href="/blogs/assets/js/55.129060b6.js"><link rel="prefetch" href="/blogs/assets/js/56.a1c2f9e7.js"><link rel="prefetch" href="/blogs/assets/js/57.85804ec7.js"><link rel="prefetch" href="/blogs/assets/js/58.fbf43daa.js"><link rel="prefetch" href="/blogs/assets/js/59.2018d50b.js"><link rel="prefetch" href="/blogs/assets/js/60.5b8cc1be.js"><link rel="prefetch" href="/blogs/assets/js/61.4a89c358.js"><link rel="prefetch" href="/blogs/assets/js/62.7a1d82a5.js"><link rel="prefetch" href="/blogs/assets/js/63.b83bf69d.js"><link rel="prefetch" href="/blogs/assets/js/64.0d8cd8a3.js"><link rel="prefetch" href="/blogs/assets/js/65.d571c93e.js"><link rel="prefetch" href="/blogs/assets/js/66.0d3e533c.js"><link rel="prefetch" href="/blogs/assets/js/67.1482640b.js"><link rel="prefetch" href="/blogs/assets/js/68.0f33db31.js"><link rel="prefetch" href="/blogs/assets/js/69.df3f0209.js"><link rel="prefetch" href="/blogs/assets/js/7.b142b0a0.js"><link rel="prefetch" href="/blogs/assets/js/70.a896fe20.js"><link rel="prefetch" href="/blogs/assets/js/71.0a2d430f.js"><link rel="prefetch" href="/blogs/assets/js/72.2a2def77.js"><link rel="prefetch" href="/blogs/assets/js/73.2c7b864f.js"><link rel="prefetch" href="/blogs/assets/js/74.39bb40c1.js"><link rel="prefetch" href="/blogs/assets/js/75.9cbab71e.js"><link rel="prefetch" href="/blogs/assets/js/76.966bb8b5.js"><link rel="prefetch" href="/blogs/assets/js/77.52793130.js"><link rel="prefetch" href="/blogs/assets/js/78.df39a7f2.js"><link rel="prefetch" href="/blogs/assets/js/79.13c68a69.js"><link rel="prefetch" href="/blogs/assets/js/8.9295f804.js"><link rel="prefetch" href="/blogs/assets/js/80.10c3ca9c.js"><link rel="prefetch" href="/blogs/assets/js/81.0e1d3060.js"><link rel="prefetch" href="/blogs/assets/js/82.f75fdbe4.js"><link rel="prefetch" href="/blogs/assets/js/83.5e440d51.js"><link rel="prefetch" href="/blogs/assets/js/9.f2ef6c8d.js"><link rel="prefetch" href="/blogs/assets/js/vendors~docsearch.9a20207f.js"><link rel="prefetch" href="/blogs/assets/js/vendors~flowchart.e9b116c9.js">
+    <link rel="stylesheet" href="/blogs/assets/css/0.styles.f48c9532.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar shadow"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <div class="con-btns-header"><a href="/blogs/" class="home-link router-link-active"><!----> <span class="site-name">jasonpink's blog</span></a> <div class="links linksColor"><!----></div></div> <div class="con-redes-download"><!----></div></header> <div class="sidebar-map"><div class="c-sidebar-map"><ul class="sidebar-links-map"><li><div class="sidebar-group first collapsable"><ul class="sidebar-group-items"><li><a href="/blogs/vue/reactive.html" aria-current="page" class="active sidebar-link">响应式原理</a></li><li><a href="/blogs/vue/diff.html" class="sidebar-link">diff算法解析</a></li><li><a href="/blogs/vue/v-model.html" class="sidebar-link">v-model原理</a></li><li><a href="/blogs/vue/nextTick.html" class="sidebar-link">nextTick原理</a></li></ul></div></li></ul> </div> <div class="con-carbon-noti"></div></div> <div class="sidebar-mask"></div> <div class="sidebar"><div class="c-sidebar"> <div class="search-box"><input aria-label="Search" placeholder="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----> <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>开发规范</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/team/git.html" class="sidebar-link">Git规范</a></li><li><a href="/blogs/team/vue.html" class="sidebar-link">Vue规范</a></li><li><a href="/blogs/team/eslint-prettier.html" class="sidebar-link">Eslint+Prettier</a></li><li><a href="/blogs/team/js-style-guide.html" class="sidebar-link">Javascript风格指南</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>Project</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/project/http.html" class="sidebar-link">http协议</a></li><li><a href="/blogs/project/performance.html" class="sidebar-link">前端性能优化</a></li><li><a href="/blogs/project/qiankun.html" class="sidebar-link">微前端实践</a></li><li><a href="/blogs/project/webpack.html" class="sidebar-link">webpack</a></li><li><a href="/blogs/project/IntersectionObserver.html" class="sidebar-link">IntersectionObserver</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>CSS</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/css/bfc.html" class="sidebar-link">BFC</a></li><li><a href="/blogs/css/flex-left-end.html" class="sidebar-link">flex布局最后一行左对齐方案</a></li><li><a href="/blogs/css/stacking-context.html" class="sidebar-link">层叠上下文</a></li><li><a href="/blogs/css/block.html" class="sidebar-link">你不知道的包含块</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>JS</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/javascript/0.1+0.2.html" class="sidebar-link">0.1+0.2 !== 0.3</a></li><li><a href="/blogs/javascript/async-defer.html" class="sidebar-link">async与defer</a></li><li><a href="/blogs/javascript/commonjs.html" class="sidebar-link">Commonjs</a></li><li><a href="/blogs/javascript/Promise.html" class="sidebar-link">Promise</a></li><li><a href="/blogs/javascript/inherit.html" class="sidebar-link">JavaScript中的继承</a></li><li><a href="/blogs/javascript/context.html" class="sidebar-link">JavaScript中的执行上下文</a></li><li><a href="/blogs/javascript/ES6解构的本质.html" class="sidebar-link">ES6解构的本质</a></li><li><a href="/blogs/javascript/debounce.html" class="sidebar-link">防抖与节流</a></li><li><a href="/blogs/javascript/for...in与for...of.html" class="sidebar-link">for...in与for...of</a></li><li><a href="/blogs/javascript/hash与history模式.html" class="sidebar-link">hash与history模式</a></li><li><a href="/blogs/javascript/eventloop.html" class="sidebar-link">事件循环机制</a></li><li><a href="/blogs/javascript/url.html" class="sidebar-link">输入url发生了什么</a></li><li><a href="/blogs/javascript/browser.html" class="sidebar-link">浏览器如何渲染页面</a></li><li><a href="/blogs/javascript/cache.html" class="sidebar-link">浏览器缓存机制</a></li><li><a href="/blogs/javascript/use-code.html" class="sidebar-link">常用代码片段</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>前端工程化</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/engineer/deploy.html" class="sidebar-link">node发布脚本</a></li><li><a href="/blogs/engineer/action.html" class="sidebar-link">github aciton</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>Vue</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/vue/reactive.html" aria-current="page" class="active sidebar-link">响应式原理</a></li><li><a href="/blogs/vue/diff.html" class="sidebar-link">diff算法解析</a></li><li><a href="/blogs/vue/v-model.html" class="sidebar-link">v-model原理</a></li><li><a href="/blogs/vue/nextTick.html" class="sidebar-link">nextTick原理</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>React</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/react/ref.html" class="sidebar-link">ref</a></li><li><a href="/blogs/react/useCallback与useMemo.html" class="sidebar-link">useCallback</a></li><li><a href="/blogs/react/高阶组件HOC.html" class="sidebar-link">高阶组件HOC</a></li><li><a href="/blogs/react/1.html" class="sidebar-link">常见问题</a></li><li><a href="/blogs/react/redux.html" class="sidebar-link">Redux</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>读书笔记</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/booknote/CSS揭秘.html" class="sidebar-link">《CSS揭秘》</a></li><li><a href="/blogs/booknote/CSS世界.html" class="sidebar-link">《CSS世界》</a></li></ul></div></li></ul> </div></div> <!----> <!----> <div class="page"><div class="content-pagex content content__default"><h1 id="响应式原理"><a href="#响应式原理" class="header-anchor">#</a> 响应式原理</h1> <h2 id="object-defineproperty"><a href="#object-defineproperty" class="header-anchor">#</a> Object.defineProperty</h2> <p>Vue2 实现响应式的核心是利用了 ES5 的 Object.defineProperty，给数据添加 getter 和 setter，目的是为了在我们读取数据和操作数据的时候自动执行一些逻辑</p> <h3 id="模拟代码"><a href="#模拟代码" class="header-anchor">#</a> 模拟代码</h3> <div class="language- extra-class"><pre class="language-text"><code>const Observer = function(data) {
+  // 循环修改为每个属性添加get set
+  for (let key in data) {
+    defineReactive(data, key);
+  }
+}
+
+const defineReactive = function(obj, key) {
+  // 局部变量dep，用于get set内部调用
+  const dep = new Dep();
+  // 获取当前值
+  let val = obj[key];
+  Object.defineProperty(obj, key, {
+    // 设置当前描述属性为可被循环
+    enumerable: true,
+    // 设置当前描述属性可被修改
+    configurable: true,
+    get() {
+      console.log('in get');
+      // 调用依赖收集器中的addSub，用于收集当前属性与Watcher中的依赖关系
+      dep.depend();
+      return val;
+    },
+    set(newVal) {
+      if (newVal === val) {
+        return;
+      }
+      val = newVal;
+      // 当值发生变更时，通知依赖收集器，更新每个需要更新的Watcher，
+      // 这里每个需要更新通过什么断定？dep.subs
+      dep.notify();
+    }
+  });
+}
+
+const observe = function(data) {
+  return new Observer(data);
+}
+
+const Vue = function(options) {
+  const self = this;
+  // 将data赋值给this._data，源码这部分用的Proxy所以我们用最简单的方式临时实现
+  if (options &amp;&amp; typeof options.data === 'function') {
+    this._data = options.data.apply(this);
+  }
+  // 挂载函数
+  this.mount = function() {
+    new Watcher(self, self.render);
+  }
+  // 渲染函数
+  this.render = function() {
+    with(self) {
+      _data.text;
+    }
+  }
+  // 监听this._data
+  observe(this._data);
+}
+
+const Watcher = function(vm, fn) {
+  const self = this;
+  this.vm = vm;
+  // 将当前Dep.target指向自己
+  Dep.target = this;
+  // 向Dep方法添加当前Wathcer
+  this.addDep = function(dep) {
+    dep.addSub(self);
+  }
+  // 更新方法，用于触发vm._render
+  this.update = function() {
+    console.log('in watcher update');
+    fn();
+  }
+  // 这里会首次调用vm._render，从而触发text的get
+  // 从而将当前的Wathcer与Dep关联起来
+  this.value = fn();
+  // 这里清空了Dep.target，为了防止notify触发时，不停的绑定Watcher与Dep，
+  // 造成代码死循环
+  Dep.target = null;
+}
+
+const Dep = function() {
+  const self = this;
+  // 收集目标
+  this.target = null;
+  // 存储收集器中需要通知的Watcher
+  this.subs = [];
+  // 当有目标时，绑定Dep与Wathcer的关系
+  this.depend = function() {
+    if (Dep.target) {
+      // 这里其实可以直接写self.addSub(Dep.target)，
+      // 没有这么写因为想还原源码的过程。
+      Dep.target.addDep(self);
+    }
+  }
+  // 为当前收集器添加Watcher
+  this.addSub = function(watcher) {
+    self.subs.push(watcher);
+  }
+  // 通知收集器中所的所有Wathcer，调用其update方法
+  this.notify = function() {
+    for (let i = 0; i &lt; self.subs.length; i += 1) {
+      self.subs[i].update();
+    }
+  }
+}
+
+const vue = new Vue({
+  data() {
+    return {
+      text: 'hello world'
+    };
+  }
+})
+
+vue.mount(); // in get
+vue._data.text = '123'; // in watcher update /n in get
+
+</code></pre></div><h3 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h3> <ol><li>在 new Vue()时，init 会数据监听，会把 data/props 数据递归放在 Object.defineProperty 中代理，同时依赖收集 Watcher</li> <li>在 app.$mount(el)时,会执行 new Watcher()，Watcher 构造函数中
+<ol><li>会去执行 updateComponent,即先 vm_render()拿到 VNode，vm._update()虚拟 DOM 对比，并更新到真实 DOM。vm_render()又会解析模板，模板中又会使用到 data/props（this.key 会触发 data.key 的 getter 函数）。此时会使用到第一步的数据监听部分（终于把两者串联了），因为 Object.defineProperty 作用就是在拿到 data.key 的同时，还能做一些额外的逻辑（通过 getter/setter）。</li> <li>getter 中做依赖收集。具体是每个 data.key 都有个 Dep 对象，在 getter 函数中，把当前 Watcher（Dep.target）增加到 Dep 对象</li> <li>会把当前 Watcher 作为 Dep.target</li></ol></li> <li>当数据变化时，触发 data.key 的 setter 方法，收集的 Watcher 执行回调。
+<ol><li>watcher 队列概念。派发更新的时候，并不会每次数据改变都触发 watcher 的回调，而是在 nextTick 后执行。</li> <li>watcher 队列执行有规则。1. 先把父组件排在子组件前（根据 id），因为父组件创建过程要先于子组件。2. 用户自定义 watcher 优先于渲染 watcher。</li></ol></li></ol> <p><img src="/blogs/assets/img/reactive.c9e2ac37.png" alt="响应式数据" title="响应式数据"></p> <h3 id="参考文章"><a href="#参考文章" class="header-anchor">#</a> 参考文章</h3> <p><a href="https://ustbhuangyi.github.io/vue-analysis/v2/reactive/" target="_blank" rel="noopener noreferrer">响应式原理<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <!----> <div class="content con-api"><!----> <!----></div> <div class="content page-nav"><p class="inner"><span class="prev"><a href="/blogs/engineer/action.html" class="prev">
+                    ←
+                    github aciton
+                </a></span> <span class="next"><a href="/blogs/vue/diff.html">
+                    diff算法解析
+                    →
+                </a></span></p></div> </div></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/blogs/assets/js/app.d6da1c5f.js" defer></script><script src="/blogs/assets/js/6.b1c09f51.js" defer></script><script src="/blogs/assets/js/1.f49fca97.js" defer></script><script src="/blogs/assets/js/45.70d0d91d.js" defer></script>
+  </body>
+</html>

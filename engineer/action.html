@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>github action 自动部署前端项目 | jasonpink&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blogs/favicon.ico">
+    <script>(function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:1650620,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');</script>
+    <meta name="description" content="">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    
+    <link rel="preload" href="/blogs/assets/css/0.styles.f48c9532.css" as="style"><link rel="preload" href="/blogs/assets/js/app.d6da1c5f.js" as="script"><link rel="preload" href="/blogs/assets/js/6.b1c09f51.js" as="script"><link rel="preload" href="/blogs/assets/js/1.f49fca97.js" as="script"><link rel="preload" href="/blogs/assets/js/53.6a957d36.js" as="script"><link rel="prefetch" href="/blogs/assets/js/10.1caeef65.js"><link rel="prefetch" href="/blogs/assets/js/11.9684e612.js"><link rel="prefetch" href="/blogs/assets/js/12.652283bc.js"><link rel="prefetch" href="/blogs/assets/js/13.23717e8d.js"><link rel="prefetch" href="/blogs/assets/js/14.502c8ebe.js"><link rel="prefetch" href="/blogs/assets/js/15.73b0f3ca.js"><link rel="prefetch" href="/blogs/assets/js/16.28fb8d21.js"><link rel="prefetch" href="/blogs/assets/js/17.96d30e1e.js"><link rel="prefetch" href="/blogs/assets/js/18.d08d1299.js"><link rel="prefetch" href="/blogs/assets/js/19.135a28aa.js"><link rel="prefetch" href="/blogs/assets/js/2.32dd7b9e.js"><link rel="prefetch" href="/blogs/assets/js/20.4db65339.js"><link rel="prefetch" href="/blogs/assets/js/21.33c6accf.js"><link rel="prefetch" href="/blogs/assets/js/22.c5844ee4.js"><link rel="prefetch" href="/blogs/assets/js/23.e45b7b3c.js"><link rel="prefetch" href="/blogs/assets/js/24.38316e94.js"><link rel="prefetch" href="/blogs/assets/js/25.5d8923b7.js"><link rel="prefetch" href="/blogs/assets/js/26.8c94239f.js"><link rel="prefetch" href="/blogs/assets/js/27.bdc48b62.js"><link rel="prefetch" href="/blogs/assets/js/28.d696023b.js"><link rel="prefetch" href="/blogs/assets/js/29.5af9e068.js"><link rel="prefetch" href="/blogs/assets/js/30.21db81c7.js"><link rel="prefetch" href="/blogs/assets/js/31.91794a33.js"><link rel="prefetch" href="/blogs/assets/js/32.431f50e3.js"><link rel="prefetch" href="/blogs/assets/js/33.42d8deb9.js"><link rel="prefetch" href="/blogs/assets/js/34.bf85ef65.js"><link rel="prefetch" href="/blogs/assets/js/35.2c3371d6.js"><link rel="prefetch" href="/blogs/assets/js/36.58fd4836.js"><link rel="prefetch" href="/blogs/assets/js/37.802914e6.js"><link rel="prefetch" href="/blogs/assets/js/38.84489525.js"><link rel="prefetch" href="/blogs/assets/js/39.d219fd7b.js"><link rel="prefetch" href="/blogs/assets/js/40.95fbe5e8.js"><link rel="prefetch" href="/blogs/assets/js/41.0e6cae84.js"><link rel="prefetch" href="/blogs/assets/js/42.037f9d3f.js"><link rel="prefetch" href="/blogs/assets/js/43.3cccb481.js"><link rel="prefetch" href="/blogs/assets/js/44.34b06605.js"><link rel="prefetch" href="/blogs/assets/js/45.70d0d91d.js"><link rel="prefetch" href="/blogs/assets/js/46.99340343.js"><link rel="prefetch" href="/blogs/assets/js/47.7dd51c87.js"><link rel="prefetch" href="/blogs/assets/js/48.e7ca951d.js"><link rel="prefetch" href="/blogs/assets/js/49.00a45625.js"><link rel="prefetch" href="/blogs/assets/js/50.05ccf665.js"><link rel="prefetch" href="/blogs/assets/js/51.c0ce1543.js"><link rel="prefetch" href="/blogs/assets/js/52.2450d87c.js"><link rel="prefetch" href="/blogs/assets/js/54.8dbdf14d.js"><link rel="prefetch" href="/blogs/assets/js/55.129060b6.js"><link rel="prefetch" href="/blogs/assets/js/56.a1c2f9e7.js"><link rel="prefetch" href="/blogs/assets/js/57.85804ec7.js"><link rel="prefetch" href="/blogs/assets/js/58.fbf43daa.js"><link rel="prefetch" href="/blogs/assets/js/59.2018d50b.js"><link rel="prefetch" href="/blogs/assets/js/60.5b8cc1be.js"><link rel="prefetch" href="/blogs/assets/js/61.4a89c358.js"><link rel="prefetch" href="/blogs/assets/js/62.7a1d82a5.js"><link rel="prefetch" href="/blogs/assets/js/63.b83bf69d.js"><link rel="prefetch" href="/blogs/assets/js/64.0d8cd8a3.js"><link rel="prefetch" href="/blogs/assets/js/65.d571c93e.js"><link rel="prefetch" href="/blogs/assets/js/66.0d3e533c.js"><link rel="prefetch" href="/blogs/assets/js/67.1482640b.js"><link rel="prefetch" href="/blogs/assets/js/68.0f33db31.js"><link rel="prefetch" href="/blogs/assets/js/69.df3f0209.js"><link rel="prefetch" href="/blogs/assets/js/7.b142b0a0.js"><link rel="prefetch" href="/blogs/assets/js/70.a896fe20.js"><link rel="prefetch" href="/blogs/assets/js/71.0a2d430f.js"><link rel="prefetch" href="/blogs/assets/js/72.2a2def77.js"><link rel="prefetch" href="/blogs/assets/js/73.2c7b864f.js"><link rel="prefetch" href="/blogs/assets/js/74.39bb40c1.js"><link rel="prefetch" href="/blogs/assets/js/75.9cbab71e.js"><link rel="prefetch" href="/blogs/assets/js/76.966bb8b5.js"><link rel="prefetch" href="/blogs/assets/js/77.52793130.js"><link rel="prefetch" href="/blogs/assets/js/78.df39a7f2.js"><link rel="prefetch" href="/blogs/assets/js/79.13c68a69.js"><link rel="prefetch" href="/blogs/assets/js/8.9295f804.js"><link rel="prefetch" href="/blogs/assets/js/80.10c3ca9c.js"><link rel="prefetch" href="/blogs/assets/js/81.0e1d3060.js"><link rel="prefetch" href="/blogs/assets/js/82.f75fdbe4.js"><link rel="prefetch" href="/blogs/assets/js/83.5e440d51.js"><link rel="prefetch" href="/blogs/assets/js/9.f2ef6c8d.js"><link rel="prefetch" href="/blogs/assets/js/vendors~docsearch.9a20207f.js"><link rel="prefetch" href="/blogs/assets/js/vendors~flowchart.e9b116c9.js">
+    <link rel="stylesheet" href="/blogs/assets/css/0.styles.f48c9532.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar shadow"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <div class="con-btns-header"><a href="/blogs/" class="home-link router-link-active"><!----> <span class="site-name">jasonpink's blog</span></a> <div class="links linksColor"><!----></div></div> <div class="con-redes-download"><!----></div></header> <div class="sidebar-map"><div class="c-sidebar-map"><ul class="sidebar-links-map"><li><div class="sidebar-group first collapsable"><ul class="sidebar-group-items"><li><a href="/blogs/engineer/deploy.html" class="sidebar-link">node发布脚本</a></li><li><a href="/blogs/engineer/action.html" aria-current="page" class="active sidebar-link">github aciton</a></li></ul></div></li></ul> </div> <div class="con-carbon-noti"></div></div> <div class="sidebar-mask"></div> <div class="sidebar"><div class="c-sidebar"> <div class="search-box"><input aria-label="Search" placeholder="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----> <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>开发规范</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/team/git.html" class="sidebar-link">Git规范</a></li><li><a href="/blogs/team/vue.html" class="sidebar-link">Vue规范</a></li><li><a href="/blogs/team/eslint-prettier.html" class="sidebar-link">Eslint+Prettier</a></li><li><a href="/blogs/team/js-style-guide.html" class="sidebar-link">Javascript风格指南</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>Project</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/project/http.html" class="sidebar-link">http协议</a></li><li><a href="/blogs/project/performance.html" class="sidebar-link">前端性能优化</a></li><li><a href="/blogs/project/qiankun.html" class="sidebar-link">微前端实践</a></li><li><a href="/blogs/project/webpack.html" class="sidebar-link">webpack</a></li><li><a href="/blogs/project/IntersectionObserver.html" class="sidebar-link">IntersectionObserver</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>CSS</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/css/bfc.html" class="sidebar-link">BFC</a></li><li><a href="/blogs/css/flex-left-end.html" class="sidebar-link">flex布局最后一行左对齐方案</a></li><li><a href="/blogs/css/stacking-context.html" class="sidebar-link">层叠上下文</a></li><li><a href="/blogs/css/block.html" class="sidebar-link">你不知道的包含块</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>JS</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/javascript/0.1+0.2.html" class="sidebar-link">0.1+0.2 !== 0.3</a></li><li><a href="/blogs/javascript/async-defer.html" class="sidebar-link">async与defer</a></li><li><a href="/blogs/javascript/commonjs.html" class="sidebar-link">Commonjs</a></li><li><a href="/blogs/javascript/Promise.html" class="sidebar-link">Promise</a></li><li><a href="/blogs/javascript/inherit.html" class="sidebar-link">JavaScript中的继承</a></li><li><a href="/blogs/javascript/context.html" class="sidebar-link">JavaScript中的执行上下文</a></li><li><a href="/blogs/javascript/ES6解构的本质.html" class="sidebar-link">ES6解构的本质</a></li><li><a href="/blogs/javascript/debounce.html" class="sidebar-link">防抖与节流</a></li><li><a href="/blogs/javascript/for...in与for...of.html" class="sidebar-link">for...in与for...of</a></li><li><a href="/blogs/javascript/hash与history模式.html" class="sidebar-link">hash与history模式</a></li><li><a href="/blogs/javascript/eventloop.html" class="sidebar-link">事件循环机制</a></li><li><a href="/blogs/javascript/url.html" class="sidebar-link">输入url发生了什么</a></li><li><a href="/blogs/javascript/browser.html" class="sidebar-link">浏览器如何渲染页面</a></li><li><a href="/blogs/javascript/cache.html" class="sidebar-link">浏览器缓存机制</a></li><li><a href="/blogs/javascript/use-code.html" class="sidebar-link">常用代码片段</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>前端工程化</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/engineer/deploy.html" class="sidebar-link">node发布脚本</a></li><li><a href="/blogs/engineer/action.html" aria-current="page" class="active sidebar-link">github aciton</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>Vue</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/vue/reactive.html" class="sidebar-link">响应式原理</a></li><li><a href="/blogs/vue/diff.html" class="sidebar-link">diff算法解析</a></li><li><a href="/blogs/vue/v-model.html" class="sidebar-link">v-model原理</a></li><li><a href="/blogs/vue/nextTick.html" class="sidebar-link">nextTick原理</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>React</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/react/ref.html" class="sidebar-link">ref</a></li><li><a href="/blogs/react/useCallback与useMemo.html" class="sidebar-link">useCallback</a></li><li><a href="/blogs/react/高阶组件HOC.html" class="sidebar-link">高阶组件HOC</a></li><li><a href="/blogs/react/1.html" class="sidebar-link">常见问题</a></li><li><a href="/blogs/react/redux.html" class="sidebar-link">Redux</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>读书笔记</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/booknote/CSS揭秘.html" class="sidebar-link">《CSS揭秘》</a></li><li><a href="/blogs/booknote/CSS世界.html" class="sidebar-link">《CSS世界》</a></li></ul></div></li></ul> </div></div> <!----> <!----> <div class="page"><div class="content-pagex content content__default"><h3 id="github-action-自动部署前端项目"><a href="#github-action-自动部署前端项目" class="header-anchor">#</a> github action 自动部署前端项目</h3> <ul><li>在 github setting 中添加所需使用的服务器配置信息
+<ul><li>这个的目的是为了保证隐私，防止服务器配置暴露，配置后我们可以通过 secrets.xxx 的形式读取到我们的配置信息</li> <li>这里我们添加了 SSH_HOST、SSH_USERNAME、SSH_PASSWORD 三个变量，编写脚本的时候会使用到</li></ul></li> <li>在项目根目录里的.github/workflows 文件夹上新建 deploy.yml
+<ul><li>触发 workflows 时机配置成 main 分支 push 的时机</li> <li>依次执行 steps</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code># 工作流名称
+name: Deploy to Server
+# 指定此工作流程的触发事件Event：main分支存在push动作即触发
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  # job名称
+  build-and-deploy:
+    # 指定该Job在最新版本的 Ubuntu Linux 的 Runner(运行器)上运行
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v2
+
+      - name: 安装指定版本 Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: &quot;18&quot;
+
+      - name:
+          Cache
+          # 缓存命中结果会存储在steps.[id].outputs.cache-hit里，该变量在继后的step中可读
+        id: cache-dependencies
+        uses: actions/cache@v3
+        with:
+          # 缓存文件目录的路径
+          path: |
+            **/node_modules
+          # key中定义缓存标志位的生成方式。runner.OS指当前环境的系统。外加对yarn.lock内容生成哈希码作为key值，如果yarn.lock改变则代表依赖有变化。
+          # 这里用yarn.lock而不是package.json是因为package.json中还有version和description之类的描述项目但和依赖无关的属性
+          key: ${{runner.OS}}-${{hashFiles('**/yarn.lock')}}
+
+      - name: 安装依赖
+        if: steps.cache-dependencies.outputs.cache-hit != 'true'
+        run: yarn install
+
+      - name: 打包项目
+        run: yarn run build
+
+      - name: 压缩dist目录
+        run: cd dist &amp;&amp; zip -r ../dist.zip ./*
+
+      - name: 传输dist.zip到远程服务器
+        uses: appleboy/scp-action@v0.1.5
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          source: &quot;dist.zip&quot;
+          target: &quot;/www/server/phpmyadmin&quot;
+
+      - name: 解压静态资源到指定目录
+        uses: appleboy/ssh-action@v0.1.5
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            cd /www/server/phpmyadmin
+            rm -rf web
+            unzip -o dist.zip -d web
+            rm -rf dist.zip
+
+            # 运行其他部署相关的命令，比如重启服务
+            # e.g., pm2 restart your-app
+
+</code></pre></div></div> <!----> <div class="content con-api"><!----> <!----></div> <div class="content page-nav"><p class="inner"><span class="prev"><a href="/blogs/engineer/deploy.html" class="prev">
+                    ←
+                    node发布脚本
+                </a></span> <span class="next"><a href="/blogs/vue/reactive.html">
+                    响应式原理
+                    →
+                </a></span></p></div> </div></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/blogs/assets/js/app.d6da1c5f.js" defer></script><script src="/blogs/assets/js/6.b1c09f51.js" defer></script><script src="/blogs/assets/js/1.f49fca97.js" defer></script><script src="/blogs/assets/js/53.6a957d36.js" defer></script>
+  </body>
+</html>

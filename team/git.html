@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git 规范 | jasonpink&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blogs/favicon.ico">
+    <script>(function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:1650620,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');</script>
+    <meta name="description" content="">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    
+    <link rel="preload" href="/blogs/assets/css/0.styles.f48c9532.css" as="style"><link rel="preload" href="/blogs/assets/js/app.d6da1c5f.js" as="script"><link rel="preload" href="/blogs/assets/js/6.b1c09f51.js" as="script"><link rel="preload" href="/blogs/assets/js/1.f49fca97.js" as="script"><link rel="preload" href="/blogs/assets/js/21.33c6accf.js" as="script"><link rel="prefetch" href="/blogs/assets/js/10.1caeef65.js"><link rel="prefetch" href="/blogs/assets/js/11.9684e612.js"><link rel="prefetch" href="/blogs/assets/js/12.652283bc.js"><link rel="prefetch" href="/blogs/assets/js/13.23717e8d.js"><link rel="prefetch" href="/blogs/assets/js/14.502c8ebe.js"><link rel="prefetch" href="/blogs/assets/js/15.73b0f3ca.js"><link rel="prefetch" href="/blogs/assets/js/16.28fb8d21.js"><link rel="prefetch" href="/blogs/assets/js/17.96d30e1e.js"><link rel="prefetch" href="/blogs/assets/js/18.d08d1299.js"><link rel="prefetch" href="/blogs/assets/js/19.135a28aa.js"><link rel="prefetch" href="/blogs/assets/js/2.32dd7b9e.js"><link rel="prefetch" href="/blogs/assets/js/20.4db65339.js"><link rel="prefetch" href="/blogs/assets/js/22.c5844ee4.js"><link rel="prefetch" href="/blogs/assets/js/23.e45b7b3c.js"><link rel="prefetch" href="/blogs/assets/js/24.38316e94.js"><link rel="prefetch" href="/blogs/assets/js/25.5d8923b7.js"><link rel="prefetch" href="/blogs/assets/js/26.8c94239f.js"><link rel="prefetch" href="/blogs/assets/js/27.bdc48b62.js"><link rel="prefetch" href="/blogs/assets/js/28.d696023b.js"><link rel="prefetch" href="/blogs/assets/js/29.5af9e068.js"><link rel="prefetch" href="/blogs/assets/js/30.21db81c7.js"><link rel="prefetch" href="/blogs/assets/js/31.91794a33.js"><link rel="prefetch" href="/blogs/assets/js/32.431f50e3.js"><link rel="prefetch" href="/blogs/assets/js/33.42d8deb9.js"><link rel="prefetch" href="/blogs/assets/js/34.bf85ef65.js"><link rel="prefetch" href="/blogs/assets/js/35.2c3371d6.js"><link rel="prefetch" href="/blogs/assets/js/36.58fd4836.js"><link rel="prefetch" href="/blogs/assets/js/37.802914e6.js"><link rel="prefetch" href="/blogs/assets/js/38.84489525.js"><link rel="prefetch" href="/blogs/assets/js/39.d219fd7b.js"><link rel="prefetch" href="/blogs/assets/js/40.95fbe5e8.js"><link rel="prefetch" href="/blogs/assets/js/41.0e6cae84.js"><link rel="prefetch" href="/blogs/assets/js/42.037f9d3f.js"><link rel="prefetch" href="/blogs/assets/js/43.3cccb481.js"><link rel="prefetch" href="/blogs/assets/js/44.34b06605.js"><link rel="prefetch" href="/blogs/assets/js/45.70d0d91d.js"><link rel="prefetch" href="/blogs/assets/js/46.99340343.js"><link rel="prefetch" href="/blogs/assets/js/47.7dd51c87.js"><link rel="prefetch" href="/blogs/assets/js/48.e7ca951d.js"><link rel="prefetch" href="/blogs/assets/js/49.00a45625.js"><link rel="prefetch" href="/blogs/assets/js/50.05ccf665.js"><link rel="prefetch" href="/blogs/assets/js/51.c0ce1543.js"><link rel="prefetch" href="/blogs/assets/js/52.2450d87c.js"><link rel="prefetch" href="/blogs/assets/js/53.6a957d36.js"><link rel="prefetch" href="/blogs/assets/js/54.8dbdf14d.js"><link rel="prefetch" href="/blogs/assets/js/55.129060b6.js"><link rel="prefetch" href="/blogs/assets/js/56.a1c2f9e7.js"><link rel="prefetch" href="/blogs/assets/js/57.85804ec7.js"><link rel="prefetch" href="/blogs/assets/js/58.fbf43daa.js"><link rel="prefetch" href="/blogs/assets/js/59.2018d50b.js"><link rel="prefetch" href="/blogs/assets/js/60.5b8cc1be.js"><link rel="prefetch" href="/blogs/assets/js/61.4a89c358.js"><link rel="prefetch" href="/blogs/assets/js/62.7a1d82a5.js"><link rel="prefetch" href="/blogs/assets/js/63.b83bf69d.js"><link rel="prefetch" href="/blogs/assets/js/64.0d8cd8a3.js"><link rel="prefetch" href="/blogs/assets/js/65.d571c93e.js"><link rel="prefetch" href="/blogs/assets/js/66.0d3e533c.js"><link rel="prefetch" href="/blogs/assets/js/67.1482640b.js"><link rel="prefetch" href="/blogs/assets/js/68.0f33db31.js"><link rel="prefetch" href="/blogs/assets/js/69.df3f0209.js"><link rel="prefetch" href="/blogs/assets/js/7.b142b0a0.js"><link rel="prefetch" href="/blogs/assets/js/70.a896fe20.js"><link rel="prefetch" href="/blogs/assets/js/71.0a2d430f.js"><link rel="prefetch" href="/blogs/assets/js/72.2a2def77.js"><link rel="prefetch" href="/blogs/assets/js/73.2c7b864f.js"><link rel="prefetch" href="/blogs/assets/js/74.39bb40c1.js"><link rel="prefetch" href="/blogs/assets/js/75.9cbab71e.js"><link rel="prefetch" href="/blogs/assets/js/76.966bb8b5.js"><link rel="prefetch" href="/blogs/assets/js/77.52793130.js"><link rel="prefetch" href="/blogs/assets/js/78.df39a7f2.js"><link rel="prefetch" href="/blogs/assets/js/79.13c68a69.js"><link rel="prefetch" href="/blogs/assets/js/8.9295f804.js"><link rel="prefetch" href="/blogs/assets/js/80.10c3ca9c.js"><link rel="prefetch" href="/blogs/assets/js/81.0e1d3060.js"><link rel="prefetch" href="/blogs/assets/js/82.f75fdbe4.js"><link rel="prefetch" href="/blogs/assets/js/83.5e440d51.js"><link rel="prefetch" href="/blogs/assets/js/9.f2ef6c8d.js"><link rel="prefetch" href="/blogs/assets/js/vendors~docsearch.9a20207f.js"><link rel="prefetch" href="/blogs/assets/js/vendors~flowchart.e9b116c9.js">
+    <link rel="stylesheet" href="/blogs/assets/css/0.styles.f48c9532.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar shadow"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <div class="con-btns-header"><a href="/blogs/" class="home-link router-link-active"><!----> <span class="site-name">jasonpink's blog</span></a> <div class="links linksColor"><!----></div></div> <div class="con-redes-download"><!----></div></header> <div class="sidebar-map"><div class="c-sidebar-map"><ul class="sidebar-links-map"><li><div class="sidebar-group first collapsable"><ul class="sidebar-group-items"><li><a href="/blogs/team/git.html" aria-current="page" class="active sidebar-link">Git规范</a></li><li><a href="/blogs/team/vue.html" class="sidebar-link">Vue规范</a></li><li><a href="/blogs/team/eslint-prettier.html" class="sidebar-link">Eslint+Prettier</a></li><li><a href="/blogs/team/js-style-guide.html" class="sidebar-link">Javascript风格指南</a></li></ul></div></li></ul> </div> <div class="con-carbon-noti"></div></div> <div class="sidebar-mask"></div> <div class="sidebar"><div class="c-sidebar"> <div class="search-box"><input aria-label="Search" placeholder="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----> <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>开发规范</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/team/git.html" aria-current="page" class="active sidebar-link">Git规范</a></li><li><a href="/blogs/team/vue.html" class="sidebar-link">Vue规范</a></li><li><a href="/blogs/team/eslint-prettier.html" class="sidebar-link">Eslint+Prettier</a></li><li><a href="/blogs/team/js-style-guide.html" class="sidebar-link">Javascript风格指南</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>Project</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/project/http.html" class="sidebar-link">http协议</a></li><li><a href="/blogs/project/performance.html" class="sidebar-link">前端性能优化</a></li><li><a href="/blogs/project/qiankun.html" class="sidebar-link">微前端实践</a></li><li><a href="/blogs/project/webpack.html" class="sidebar-link">webpack</a></li><li><a href="/blogs/project/IntersectionObserver.html" class="sidebar-link">IntersectionObserver</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>CSS</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/css/bfc.html" class="sidebar-link">BFC</a></li><li><a href="/blogs/css/flex-left-end.html" class="sidebar-link">flex布局最后一行左对齐方案</a></li><li><a href="/blogs/css/stacking-context.html" class="sidebar-link">层叠上下文</a></li><li><a href="/blogs/css/block.html" class="sidebar-link">你不知道的包含块</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>JS</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/javascript/0.1+0.2.html" class="sidebar-link">0.1+0.2 !== 0.3</a></li><li><a href="/blogs/javascript/async-defer.html" class="sidebar-link">async与defer</a></li><li><a href="/blogs/javascript/commonjs.html" class="sidebar-link">Commonjs</a></li><li><a href="/blogs/javascript/Promise.html" class="sidebar-link">Promise</a></li><li><a href="/blogs/javascript/inherit.html" class="sidebar-link">JavaScript中的继承</a></li><li><a href="/blogs/javascript/context.html" class="sidebar-link">JavaScript中的执行上下文</a></li><li><a href="/blogs/javascript/ES6解构的本质.html" class="sidebar-link">ES6解构的本质</a></li><li><a href="/blogs/javascript/debounce.html" class="sidebar-link">防抖与节流</a></li><li><a href="/blogs/javascript/for...in与for...of.html" class="sidebar-link">for...in与for...of</a></li><li><a href="/blogs/javascript/hash与history模式.html" class="sidebar-link">hash与history模式</a></li><li><a href="/blogs/javascript/eventloop.html" class="sidebar-link">事件循环机制</a></li><li><a href="/blogs/javascript/url.html" class="sidebar-link">输入url发生了什么</a></li><li><a href="/blogs/javascript/browser.html" class="sidebar-link">浏览器如何渲染页面</a></li><li><a href="/blogs/javascript/cache.html" class="sidebar-link">浏览器缓存机制</a></li><li><a href="/blogs/javascript/use-code.html" class="sidebar-link">常用代码片段</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>前端工程化</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/engineer/deploy.html" class="sidebar-link">node发布脚本</a></li><li><a href="/blogs/engineer/action.html" class="sidebar-link">github aciton</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>Vue</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/vue/reactive.html" class="sidebar-link">响应式原理</a></li><li><a href="/blogs/vue/diff.html" class="sidebar-link">diff算法解析</a></li><li><a href="/blogs/vue/v-model.html" class="sidebar-link">v-model原理</a></li><li><a href="/blogs/vue/nextTick.html" class="sidebar-link">nextTick原理</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>React</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/react/ref.html" class="sidebar-link">ref</a></li><li><a href="/blogs/react/useCallback与useMemo.html" class="sidebar-link">useCallback</a></li><li><a href="/blogs/react/高阶组件HOC.html" class="sidebar-link">高阶组件HOC</a></li><li><a href="/blogs/react/1.html" class="sidebar-link">常见问题</a></li><li><a href="/blogs/react/redux.html" class="sidebar-link">Redux</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>读书笔记</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/booknote/CSS揭秘.html" class="sidebar-link">《CSS揭秘》</a></li><li><a href="/blogs/booknote/CSS世界.html" class="sidebar-link">《CSS世界》</a></li></ul></div></li></ul> </div></div> <!----> <!----> <div class="page"><div class="content-pagex content content__default"><h1 id="git-规范"><a href="#git-规范" class="header-anchor">#</a> Git 规范</h1> <h2 id="git-分支命名规范"><a href="#git-分支命名规范" class="header-anchor">#</a> Git 分支命名规范</h2> <ul><li>master：主分支，负责记录上线版本的迭代，该分支代码与线上代码完全一致。分支受保护不允许删除、开发，只允许合并版本分支代码，限制 merge 和 push 权限</li> <li>version/develop: 版本迭代分支，总是从主分支创建，生命周期从版本开始到版本上线结束，不允许直接开发，只允许合并 feature 分支代码</li> <li>feature/*: 功能开发分支，用于开发新的功能，不同的功能创建不同的功能分支。（强烈建议 feature 分支按功能粒度细化，本地可能同时存在多个 feature 分支并行开发，避免其中某个或者某些 feature 因为难以实现或延期不能随版本上线，从而可以延长生命周期到下个版本继续进行，或者因为实现错误，实验性质的 feature 导致中途抛弃）</li> <li>bugfix/*：bug 修复分支，用于修复不紧急的 bug，普通 bug 均需要创建 bugfix 分支开发，开发完成自测没问题后合并到 develop 分支后，删除该分支。</li> <li>release/*：发布分支，用于代码上线准备，该分支从 develop 分支创建，创建之后由测试同学发布到测试环境进行测试，测试过程中发现 bug 需要开发人员在该 release 分支上进行 bug 修复，所有 bug 修复完后，在上线之前，需要合并该 release 分支到 master 分支和 develop 分支。</li> <li>hotfix：生产 bug 修复分支，该分支只有紧急情况下使用，从 master 分支创建，用于紧急修复线上 bug。修复完毕后，部署到相应环境测试，测试通过后上线。上线完成立即删除，并同步到各个环境分支</li></ul> <h2 id="git-commit-规范"><a href="#git-commit-规范" class="header-anchor">#</a> Git commit 规范</h2> <h3 id="约定式提交"><a href="#约定式提交" class="header-anchor">#</a> 约定式提交</h3> <p>每次使用 git commit 的时候都需要写 commit message,如果 message style 是按照固定的模版格式书写，对于后期的维护和编写 changelog 都有巨大的好处。
+而且现在的很多自动生成 changelog 的工具，都是建立在约定式提交的基础之上。交互式提交工具（例如： commitizen），使用工具能够保证约定式提交个格式是满足规范的</p> <h3 id="约定式提交格式校验"><a href="#约定式提交格式校验" class="header-anchor">#</a> 约定式提交格式校验</h3> <h4 id="commitlint-校验约定式提交格式"><a href="#commitlint-校验约定式提交格式" class="header-anchor">#</a> commitlint 校验约定式提交格式</h4> <p>为了防止出现不满足格式要求的 commit message 出现，还是需要添加上必要的格式校验.使用 commitlint</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// commitlint.config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token keyword">extends</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;@commitlint/config-conventional&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="husky-配置-git-hooks"><a href="#husky-配置-git-hooks" class="header-anchor">#</a> husky 配置 git hooks</h4> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;husky&quot;: {
+    &quot;hooks&quot;: {
+      &quot;commit-msg&quot;: &quot;commitlint -E HUSKY_GIT_PARAMS&quot; // 配合commitlint使用
+      // &quot;pre-commit&quot;: &quot;lint-staged&quot; // 配置lint-staged
+    }
+  }
+}
+</code></pre></div><h4 id="lint-staged-配置"><a href="#lint-staged-配置" class="header-anchor">#</a> lint-staged 配置</h4> <p>list-staged 主要配合 linter 用来格式化代码（统一的代码风格），这部是可选的。是用来让格式化工具只 lint 需要提交的文件，其它文件忽略，这样能够提高效率。</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;husky&quot;: {
+    &quot;hooks&quot;: {
+      &quot;pre-commit&quot;: &quot;lint-staged&quot;
+    }
+  },
+  &quot;lint-staged&quot;: {
+    &quot;src/**/*.{js,ts,css,vue,tsx,jsx}&quot;: [
+      //&quot;vue-cli-service lint&quot;, 配合vue使用
+      &quot;eslint&quot;,
+      &quot;git add&quot;
+    ]
+  }
+}
+</code></pre></div><h4 id="自动生成-changelog"><a href="#自动生成-changelog" class="header-anchor">#</a> 自动生成 changelog</h4> <p>自动生成 changelog 是建立在约定式提交的基础上。standard-version 做了自动打 tag，自动生成 changelog 等过程.</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;scripts&quot;: {
+    &quot;release&quot;: &quot;standard-version&quot;,
+    &quot;release:first&quot;: &quot;standard-version -r 1.0.0&quot;
+  },
+  // standard-version 好多配置看官方文档（可选）
+  &quot;standard-version&quot;: {}
+}
+</code></pre></div><h3 id="完整配置"><a href="#完整配置" class="header-anchor">#</a> 完整配置</h3> <div class="language- extra-class"><pre class="language-text"><code>{
+  script: {
+    ...,
+    &quot;commit&quot;: &quot;git-cz&quot;,
+    &quot;release&quot;: &quot;standard-version&quot;,
+    &quot;release:first&quot;: &quot;standard-version -r 1.0.0&quot;
+  },
+  devDependencies: {
+    &quot;@commitlint/cli&quot;: &quot;^14.1.0&quot;,
+    &quot;@commitlint/config-conventional&quot;: &quot;^14.1.0&quot;,
+    &quot;commitizen&quot;: &quot;^4.2.4&quot;,
+    &quot;cz-conventional-changelog&quot;: &quot;^3.3.0&quot;,
+    &quot;husky&quot;: &quot;^4.3.8&quot;,(用最新版7，有点问题)
+    &quot;lint-staged&quot;: &quot;^11.2.6&quot;,
+    &quot;standard-version&quot;: &quot;^9.3.2&quot;,
+  }
+  &quot;config&quot;: {
+    &quot;commitizen&quot;: {
+      &quot;path&quot;: &quot;./node_modules/cz-conventional-changelog&quot;
+    }
+  },
+  &quot;husky&quot;: {
+    &quot;hooks&quot;: {
+      &quot;pre-commit&quot;: &quot;lint-staged&quot;,
+      &quot;commit-msg&quot;: &quot;commitlint -E HUSKY_GIT_PARAMS&quot;
+    }
+  },
+  &quot;lint-staged&quot;: {
+    &quot;src/**/*.{js,css,vue,jsx,ts,tsx}&quot;: [
+      &quot;prettier --write&quot;,
+      &quot;eslint --cache --fix&quot;,
+      &quot;git add&quot;
+    ]
+  },
+  &quot;standard-version&quot;: {}
+}
+</code></pre></div><h3 id="husky-新版配置"><a href="#husky-新版配置" class="header-anchor">#</a> husky 新版配置</h3> <p>安装新版 husky: <strong>yarn add -D husky</strong></p> <p>然后执行 husky 命令行工具，启用 git hook:<strong>npx husky install</strong></p> <p>该命令会在当前项目中创建一个 .husky 目录，用来存放我们 git hook 脚本</p> <p>执行<strong>git config --local --list</strong> ,可以看到当前 git 项目的本地配置有：core.hookspath=.husky</p> <p>其他同事拉取项目时，他们可能会忘记执行上面的命令启用 git hook。但有一个命令他们是一定会执行的，就是执行 npm install 或 yarn 去安装依赖。于是我们需要利用 npm script 的生命周期脚本，加上一个 prepare。prepare 会在 install 之后执行。</p> <div class="language- extra-class"><pre class="language-text"><code>// package.json
+{
+  &quot;scripts&quot;: {
+   // ...
+    &quot;prepare&quot;: &quot;husky install&quot;
+  }
+}
+</code></pre></div><p>这样就能保证新同事拉项目并安装依赖后，husky 被启用。</p> <p>创建 hook</p> <div class="language- extra-class"><pre class="language-text"><code>
+npx husky add .husky/pre-commit &quot;npm test&quot;
+
+echo &quot;npm test&quot; &gt; .husky/pre-commit // 最新版 v9.0.11 使用这种方式创建
+</code></pre></div><p>现在我们添加两个 hook</p> <div class="language- extra-class"><pre class="language-text"><code>
+echo &quot;npx --no -- commitlint --edit \$1&quot; &gt; .husky/commit-msg
+echo &quot;npm run lint-staged&quot; &gt; .husky/pre-commit
+</code></pre></div><p>成功后可以在.husky 目录下看到两个对应的脚本文件
+<img src="/blogs/assets/img/husky.cabdbbfa.jpg" alt="husky 目录" title="husky目录"></p> <p>测试一下效果</p> <p>提交不规范的 commit 信息</p> <p><img src="/blogs/assets/img/commitlint.fd5da289.jpg" alt="commintlint" title="commintlint"></p> <p>提交未通过 eslint 校验的文件</p> <p><img src="/blogs/assets/img/eslint.56d4cdfc.jpg" alt="eslint" title="eslint"></p></div> <!----> <div class="content con-api"><!----> <!----></div> <div class="content page-nav"><p class="inner"><!----> <span class="next"><a href="/blogs/team/vue.html">
+                    Vue规范
+                    →
+                </a></span></p></div> </div></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/blogs/assets/js/app.d6da1c5f.js" defer></script><script src="/blogs/assets/js/6.b1c09f51.js" defer></script><script src="/blogs/assets/js/1.f49fca97.js" defer></script><script src="/blogs/assets/js/21.33c6accf.js" defer></script>
+  </body>
+</html>

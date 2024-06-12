@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>eslint 与 prettier | jasonpink&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blogs/favicon.ico">
+    <script>(function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:1650620,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');</script>
+    <meta name="description" content="">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    
+    <link rel="preload" href="/blogs/assets/css/0.styles.f48c9532.css" as="style"><link rel="preload" href="/blogs/assets/js/app.d6da1c5f.js" as="script"><link rel="preload" href="/blogs/assets/js/6.b1c09f51.js" as="script"><link rel="preload" href="/blogs/assets/js/1.f49fca97.js" as="script"><link rel="preload" href="/blogs/assets/js/79.13c68a69.js" as="script"><link rel="prefetch" href="/blogs/assets/js/10.1caeef65.js"><link rel="prefetch" href="/blogs/assets/js/11.9684e612.js"><link rel="prefetch" href="/blogs/assets/js/12.652283bc.js"><link rel="prefetch" href="/blogs/assets/js/13.23717e8d.js"><link rel="prefetch" href="/blogs/assets/js/14.502c8ebe.js"><link rel="prefetch" href="/blogs/assets/js/15.73b0f3ca.js"><link rel="prefetch" href="/blogs/assets/js/16.28fb8d21.js"><link rel="prefetch" href="/blogs/assets/js/17.96d30e1e.js"><link rel="prefetch" href="/blogs/assets/js/18.d08d1299.js"><link rel="prefetch" href="/blogs/assets/js/19.135a28aa.js"><link rel="prefetch" href="/blogs/assets/js/2.32dd7b9e.js"><link rel="prefetch" href="/blogs/assets/js/20.4db65339.js"><link rel="prefetch" href="/blogs/assets/js/21.33c6accf.js"><link rel="prefetch" href="/blogs/assets/js/22.c5844ee4.js"><link rel="prefetch" href="/blogs/assets/js/23.e45b7b3c.js"><link rel="prefetch" href="/blogs/assets/js/24.38316e94.js"><link rel="prefetch" href="/blogs/assets/js/25.5d8923b7.js"><link rel="prefetch" href="/blogs/assets/js/26.8c94239f.js"><link rel="prefetch" href="/blogs/assets/js/27.bdc48b62.js"><link rel="prefetch" href="/blogs/assets/js/28.d696023b.js"><link rel="prefetch" href="/blogs/assets/js/29.5af9e068.js"><link rel="prefetch" href="/blogs/assets/js/30.21db81c7.js"><link rel="prefetch" href="/blogs/assets/js/31.91794a33.js"><link rel="prefetch" href="/blogs/assets/js/32.431f50e3.js"><link rel="prefetch" href="/blogs/assets/js/33.42d8deb9.js"><link rel="prefetch" href="/blogs/assets/js/34.bf85ef65.js"><link rel="prefetch" href="/blogs/assets/js/35.2c3371d6.js"><link rel="prefetch" href="/blogs/assets/js/36.58fd4836.js"><link rel="prefetch" href="/blogs/assets/js/37.802914e6.js"><link rel="prefetch" href="/blogs/assets/js/38.84489525.js"><link rel="prefetch" href="/blogs/assets/js/39.d219fd7b.js"><link rel="prefetch" href="/blogs/assets/js/40.95fbe5e8.js"><link rel="prefetch" href="/blogs/assets/js/41.0e6cae84.js"><link rel="prefetch" href="/blogs/assets/js/42.037f9d3f.js"><link rel="prefetch" href="/blogs/assets/js/43.3cccb481.js"><link rel="prefetch" href="/blogs/assets/js/44.34b06605.js"><link rel="prefetch" href="/blogs/assets/js/45.70d0d91d.js"><link rel="prefetch" href="/blogs/assets/js/46.99340343.js"><link rel="prefetch" href="/blogs/assets/js/47.7dd51c87.js"><link rel="prefetch" href="/blogs/assets/js/48.e7ca951d.js"><link rel="prefetch" href="/blogs/assets/js/49.00a45625.js"><link rel="prefetch" href="/blogs/assets/js/50.05ccf665.js"><link rel="prefetch" href="/blogs/assets/js/51.c0ce1543.js"><link rel="prefetch" href="/blogs/assets/js/52.2450d87c.js"><link rel="prefetch" href="/blogs/assets/js/53.6a957d36.js"><link rel="prefetch" href="/blogs/assets/js/54.8dbdf14d.js"><link rel="prefetch" href="/blogs/assets/js/55.129060b6.js"><link rel="prefetch" href="/blogs/assets/js/56.a1c2f9e7.js"><link rel="prefetch" href="/blogs/assets/js/57.85804ec7.js"><link rel="prefetch" href="/blogs/assets/js/58.fbf43daa.js"><link rel="prefetch" href="/blogs/assets/js/59.2018d50b.js"><link rel="prefetch" href="/blogs/assets/js/60.5b8cc1be.js"><link rel="prefetch" href="/blogs/assets/js/61.4a89c358.js"><link rel="prefetch" href="/blogs/assets/js/62.7a1d82a5.js"><link rel="prefetch" href="/blogs/assets/js/63.b83bf69d.js"><link rel="prefetch" href="/blogs/assets/js/64.0d8cd8a3.js"><link rel="prefetch" href="/blogs/assets/js/65.d571c93e.js"><link rel="prefetch" href="/blogs/assets/js/66.0d3e533c.js"><link rel="prefetch" href="/blogs/assets/js/67.1482640b.js"><link rel="prefetch" href="/blogs/assets/js/68.0f33db31.js"><link rel="prefetch" href="/blogs/assets/js/69.df3f0209.js"><link rel="prefetch" href="/blogs/assets/js/7.b142b0a0.js"><link rel="prefetch" href="/blogs/assets/js/70.a896fe20.js"><link rel="prefetch" href="/blogs/assets/js/71.0a2d430f.js"><link rel="prefetch" href="/blogs/assets/js/72.2a2def77.js"><link rel="prefetch" href="/blogs/assets/js/73.2c7b864f.js"><link rel="prefetch" href="/blogs/assets/js/74.39bb40c1.js"><link rel="prefetch" href="/blogs/assets/js/75.9cbab71e.js"><link rel="prefetch" href="/blogs/assets/js/76.966bb8b5.js"><link rel="prefetch" href="/blogs/assets/js/77.52793130.js"><link rel="prefetch" href="/blogs/assets/js/78.df39a7f2.js"><link rel="prefetch" href="/blogs/assets/js/8.9295f804.js"><link rel="prefetch" href="/blogs/assets/js/80.10c3ca9c.js"><link rel="prefetch" href="/blogs/assets/js/81.0e1d3060.js"><link rel="prefetch" href="/blogs/assets/js/82.f75fdbe4.js"><link rel="prefetch" href="/blogs/assets/js/83.5e440d51.js"><link rel="prefetch" href="/blogs/assets/js/9.f2ef6c8d.js"><link rel="prefetch" href="/blogs/assets/js/vendors~docsearch.9a20207f.js"><link rel="prefetch" href="/blogs/assets/js/vendors~flowchart.e9b116c9.js">
+    <link rel="stylesheet" href="/blogs/assets/css/0.styles.f48c9532.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar shadow"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <div class="con-btns-header"><a href="/blogs/" class="home-link router-link-active"><!----> <span class="site-name">jasonpink's blog</span></a> <div class="links linksColor"><!----></div></div> <div class="con-redes-download"><!----></div></header> <div class="sidebar-map"><div class="c-sidebar-map"><ul class="sidebar-links-map"><li><div class="sidebar-group first collapsable"><ul class="sidebar-group-items"><li><a href="/blogs/team/git.html" class="sidebar-link">Git规范</a></li><li><a href="/blogs/team/vue.html" class="sidebar-link">Vue规范</a></li><li><a href="/blogs/team/eslint-prettier.html" aria-current="page" class="active sidebar-link">Eslint+Prettier</a></li><li><a href="/blogs/team/js-style-guide.html" class="sidebar-link">Javascript风格指南</a></li></ul></div></li></ul> </div> <div class="con-carbon-noti"></div></div> <div class="sidebar-mask"></div> <div class="sidebar"><div class="c-sidebar"> <div class="search-box"><input aria-label="Search" placeholder="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----> <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>开发规范</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/team/git.html" class="sidebar-link">Git规范</a></li><li><a href="/blogs/team/vue.html" class="sidebar-link">Vue规范</a></li><li><a href="/blogs/team/eslint-prettier.html" aria-current="page" class="active sidebar-link">Eslint+Prettier</a></li><li><a href="/blogs/team/js-style-guide.html" class="sidebar-link">Javascript风格指南</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>Project</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/project/http.html" class="sidebar-link">http协议</a></li><li><a href="/blogs/project/performance.html" class="sidebar-link">前端性能优化</a></li><li><a href="/blogs/project/qiankun.html" class="sidebar-link">微前端实践</a></li><li><a href="/blogs/project/webpack.html" class="sidebar-link">webpack</a></li><li><a href="/blogs/project/IntersectionObserver.html" class="sidebar-link">IntersectionObserver</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>CSS</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/css/bfc.html" class="sidebar-link">BFC</a></li><li><a href="/blogs/css/flex-left-end.html" class="sidebar-link">flex布局最后一行左对齐方案</a></li><li><a href="/blogs/css/stacking-context.html" class="sidebar-link">层叠上下文</a></li><li><a href="/blogs/css/block.html" class="sidebar-link">你不知道的包含块</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>JS</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/javascript/0.1+0.2.html" class="sidebar-link">0.1+0.2 !== 0.3</a></li><li><a href="/blogs/javascript/async-defer.html" class="sidebar-link">async与defer</a></li><li><a href="/blogs/javascript/commonjs.html" class="sidebar-link">Commonjs</a></li><li><a href="/blogs/javascript/Promise.html" class="sidebar-link">Promise</a></li><li><a href="/blogs/javascript/inherit.html" class="sidebar-link">JavaScript中的继承</a></li><li><a href="/blogs/javascript/context.html" class="sidebar-link">JavaScript中的执行上下文</a></li><li><a href="/blogs/javascript/ES6解构的本质.html" class="sidebar-link">ES6解构的本质</a></li><li><a href="/blogs/javascript/debounce.html" class="sidebar-link">防抖与节流</a></li><li><a href="/blogs/javascript/for...in与for...of.html" class="sidebar-link">for...in与for...of</a></li><li><a href="/blogs/javascript/hash与history模式.html" class="sidebar-link">hash与history模式</a></li><li><a href="/blogs/javascript/eventloop.html" class="sidebar-link">事件循环机制</a></li><li><a href="/blogs/javascript/url.html" class="sidebar-link">输入url发生了什么</a></li><li><a href="/blogs/javascript/browser.html" class="sidebar-link">浏览器如何渲染页面</a></li><li><a href="/blogs/javascript/cache.html" class="sidebar-link">浏览器缓存机制</a></li><li><a href="/blogs/javascript/use-code.html" class="sidebar-link">常用代码片段</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>前端工程化</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/engineer/deploy.html" class="sidebar-link">node发布脚本</a></li><li><a href="/blogs/engineer/action.html" class="sidebar-link">github aciton</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>Vue</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/vue/reactive.html" class="sidebar-link">响应式原理</a></li><li><a href="/blogs/vue/diff.html" class="sidebar-link">diff算法解析</a></li><li><a href="/blogs/vue/v-model.html" class="sidebar-link">v-model原理</a></li><li><a href="/blogs/vue/nextTick.html" class="sidebar-link">nextTick原理</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>React</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/react/ref.html" class="sidebar-link">ref</a></li><li><a href="/blogs/react/useCallback与useMemo.html" class="sidebar-link">useCallback</a></li><li><a href="/blogs/react/高阶组件HOC.html" class="sidebar-link">高阶组件HOC</a></li><li><a href="/blogs/react/1.html" class="sidebar-link">常见问题</a></li><li><a href="/blogs/react/redux.html" class="sidebar-link">Redux</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>读书笔记</span></p> <ul class="sidebar-group-items"><li><a href="/blogs/booknote/CSS揭秘.html" class="sidebar-link">《CSS揭秘》</a></li><li><a href="/blogs/booknote/CSS世界.html" class="sidebar-link">《CSS世界》</a></li></ul></div></li></ul> </div></div> <!----> <!----> <div class="page"><div class="content-pagex content content__default"><h1 id="eslint-与-prettier"><a href="#eslint-与-prettier" class="header-anchor">#</a> eslint 与 prettier</h1> <h2 id="vscode-安装插件"><a href="#vscode-安装插件" class="header-anchor">#</a> VSCode 安装插件</h2> <ul><li>ESLint VSCode 插件， 主要的作用是会将有错的地方进行标记，方便我们知道哪些文件、哪些代码是有问题的</li> <li>Prettier VSCode 插件，主要作用是代码格式化的时候按照项目约定的规范进行代码美化</li></ul> <hr> <h2 id="安装-eslint"><a href="#安装-eslint" class="header-anchor">#</a> 安装 ESlint</h2> <p>tips: 遇到一个问题，vscode 不显示语法错误，控制台有错误信息，折腾了很久，才发现是 vscode 版本跟 eslint 版本冲突，升级 vscode 版本就解决了</p> <div class="language- extra-class"><pre class="language-text"><code># 全局安装 ESLint
+$ npm install -g eslint
+
+# 初始化 ESLint 配置
+$ eslint --init
+</code></pre></div><p>经过一系列一问一答的环节后，你会发现在你文件夹的根目录生成了一个 .eslintrc.js，文件配置如下</p> <div class="language- extra-class"><pre class="language-text"><code>module.exports = {
+	env: {// 环境
+		browser: true,
+		es2021: true,
+	},
+	extends: [// 拓展
+		'eslint:recommended',
+		'plugin:@typescript-eslint/recommended',
+	],
+	parser: '@typescript-eslint/parser', // 解析器，本解析器支持Ts
+	parserOptions: {// 解析器配置选项
+		ecmaVersion: 2020, // 指定es版本
+		sourceType: 'module', // 代码支持es6，使用module
+	},
+	plugins: [// 插件
+		'@typescript-eslint',
+	],
+	rules: {
+		// 规则
+	},
+};
+</code></pre></div><ol><li><p>parserOptions-解析器选项</p> <ul><li>ecmaVersion
+<ul><li>你可以使用 6、7、8、9 或 10 来指定你想要使用的 ECMAScript 版本</li></ul></li> <li>sourceType
+<ul><li>设置为 script (默认) 或 module（如果你的代码是 ECMAScript 模块)</li></ul></li> <li>parser
+<ul><li>babel-eslint (主要用于将 ECMAScript 2015+(es6+) 版本的代码转换为向后兼容的 JavaScript 语法)</li> <li>@typescript-eslint/parser (该解析器将 TypeScript 转换成与 estree 兼容的形式， 允许 ESLint 验证 TypeScript 源代码)</li></ul></li> <li>ecmaFeatures (这是个对象，表示你想使用的额外的语言特性)
+<ul><li>jsx - 启用 JSX</li></ul></li></ul></li> <li><p>env 和 golbals - 环境和全局变量</p> <ul><li>ESLint 会检测未声明的变量，并发出警告，但是有些变量是我们引入的库声明的，这里就需要提前在配置中声明</li></ul> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;env&quot;: {
+        &quot;browser&quot;: true,
+        &quot;es2021&quot;: true,
+        &quot;jquery&quot;: true // 环境中开启jquery，表示声明了jquery相关的全局变量，无需在globals二次声明
+    }
+}
+
+</code></pre></div></li> <li><p>rules - 规则</p> <ul><li>off 或 0：关闭规则</li> <li>warn 或 1：开启规则，warn 级别的错误 (不会导致程序退出)</li> <li>error 或 2：开启规则，error 级别的错误(当被触发的时候，程序会退出)</li></ul></li> <li><p>plugins - 插件</p> <ul><li>我们要在项目中使用 TypeScript，需要将解析器改为@typescript-eslint/parser，同时需要安装@typescript-eslint/eslint-plugin 插件来拓展规则,<strong>添加的 plugins 中的规则默认是不开启的</strong></li></ul></li> <li><p>extends - 拓展 - extends 可以理解为一份配置好的 plugin 和 rules</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;extends&quot;: [
+        &quot;eslint:recommended&quot;, // 官方拓展
+        &quot;plugin:@typescript-eslint/recommended&quot;, // 插件拓展
+        &quot;standard&quot;, // npm 包，开源社区流行的配置方案，比如：eslint-config-airbnb、eslint-config-standard
+    ],
+    &quot;rules&quot;: {
+        &quot;indent&quot;: [&quot;error&quot;, 4], // 拓展或覆盖 extends 配置的规则
+        &quot;no-console&quot;: &quot;off&quot;,
+    }
+};
+
+    ```
+</code></pre></div></li></ol> <hr> <h2 id="安装-prettier"><a href="#安装-prettier" class="header-anchor">#</a> 安装 Prettier</h2> <div class="language- extra-class"><pre class="language-text"><code>$ npm install --save-dev --save-exact prettier
+
+$ yarn add --dev --exact prettier
+
+npx prettier --write . #格式化所有文件
+
+</code></pre></div><p>配置文件支持多种形式</p> <ul><li>根目录创建.prettierrc 文件，能够写入 YML、JSON 的配置格式，并且支持.yaml、.yml、.json、.js 后缀</li> <li>根目录创建.prettier.config.js 文件，并对外 export 一个对象</li> <li>在 package.json 中新建 Prettier 属性</li></ul> <hr> <h2 id="与-eslint-配合使用"><a href="#与-eslint-配合使用" class="header-anchor">#</a> 与 ESLint 配合使用</h2> <div class="language- extra-class"><pre><code>解决思路是在 ESLint 的规则配置文件上做文章，安装特定的 plugin，把其配置到规则的尾部，实现 Prettier 规则对 ESLint 规则的覆盖
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>    $ npm install --save-dev eslint-plugin-prettier
+    {
+        &quot;extends&quot;: [
+            ...,
+            &quot;已经配置的规则&quot;,
+        +   &quot;plugin:prettier/recommended&quot;
+        ],
+        &quot;rules&quot;: {
+            &quot;prettier/prettier&quot;: &quot;error&quot;,
+        }
+    }
+</code></pre></div><h2 id="prettier-配置"><a href="#prettier-配置" class="header-anchor">#</a> Prettier 配置</h2> <div class="language- extra-class"><pre class="language-text"><code>module.exports = {
+  printWidth: 80, // 80 每行代码长度
+  tabWidth: 2, // 每个 tab 相当于多少个空格
+  useTabs: false, // 是否使用 tab 进行缩进
+  singleQuote: true, // 是否使用单引号
+  semi: true, // 声明结尾使用分号
+  trailingComma: 'none', // 对象尾逗号
+  bracketSpacing: true, // 对象字面量的大括号间使用空格
+  jsxSingleQuote: false,
+  jsxBracketSameLine: false, // false 多行 jsx 中的 &gt; 放在最后一行，而不是另起一行
+  arrowParens: 'avoid', // avoid 只有一个参数是否带圆括号
+  vueIndentScriptAndStyle: true, // vue文件的script标签和Style标签下的内容需要缩进
+  singleAttributePerLine: false, // 在 HTML、Vue 和 JSX 中每行强制执行单个属性
+  embeddedLanguageFormatting: 'auto' // 控制 Prettier 是否格式化文件中嵌入的引用代码
+};
+
+</code></pre></div><h2 id="打开-vscode-配置文件-setting-json"><a href="#打开-vscode-配置文件-setting-json" class="header-anchor">#</a> 打开 vscode 配置文件 setting.json</h2> <ol><li><p>设置代码在保存的时候自动格式化</p> <div class="language- extra-class"><pre class="language-text"><code>&quot;editor.formatOnSave&quot;: true
+</code></pre></div></li> <li><p>设置 .js .ts .jsx .tsx .less .css .json 格式的文件都采用 prettier-vscode 插件进行格式化</p> <div class="language- extra-class"><pre class="language-text"><code>    &quot;[javascript]&quot;: {
+         &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;
+     },
+     &quot;[typescript]&quot;: {
+         &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;
+     },
+     &quot;[javascript|react]&quot;: {
+         &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;
+     },
+     &quot;[typescript|react]&quot;: {
+         &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;
+     },
+     &quot;[less]&quot;: {
+         &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;
+     },
+     &quot;[css]&quot;: {
+         &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;
+     },
+     &quot;[json]&quot;: {
+         &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;
+     }
+</code></pre></div></li> <li><p>配置 prettier 插件读取项目中哪个配置文件，默认是根目录下的 .prettierrc 文件，如果你的项目下不是这个文件就需要修改为你的配置文件，比如很多项目为 .prettierrc.js 或者 .prettierrc.ts</p> <div class="language- extra-class"><pre class="language-text"><code>&quot;prettier.configPath&quot;: &quot;.prettierrc.js&quot;,
+</code></pre></div></li></ol> <hr></div> <!----> <div class="content con-api"><!----> <!----></div> <div class="content page-nav"><p class="inner"><span class="prev"><a href="/blogs/team/vue.html" class="prev">
+                    ←
+                    Vue规范
+                </a></span> <span class="next"><a href="/blogs/team/js-style-guide.html">
+                    Javascript风格指南
+                    →
+                </a></span></p></div> </div></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/blogs/assets/js/app.d6da1c5f.js" defer></script><script src="/blogs/assets/js/6.b1c09f51.js" defer></script><script src="/blogs/assets/js/1.f49fca97.js" defer></script><script src="/blogs/assets/js/79.13c68a69.js" defer></script>
+  </body>
+</html>
