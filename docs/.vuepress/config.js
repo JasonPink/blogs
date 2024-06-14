@@ -95,16 +95,16 @@ module.exports = {
             path: "/css/bfc",
           },
           {
-            title: "flex布局最后一行左对齐方案",
-            path: "/css/flex-left-end",
-          },
-          {
             title: "层叠上下文",
             path: "/css/stacking-context",
           },
           {
             title: "你不知道的包含块",
             path: "/css/block",
+          },
+          {
+            title: "flex最后一行左对齐方案",
+            path: "/css/flex-left-end",
           },
         ],
       },
@@ -114,28 +114,28 @@ module.exports = {
         collapsable: true,
         children: [
           {
-            title: "0.1+0.2 !== 0.3",
-            path: "/javascript/0.1+0.2",
+            title: "继承",
+            path: "/javascript/inherit",
           },
           {
-            title: "async与defer",
-            path: "/javascript/async-defer",
-          },
-          {
-            title: "Commonjs",
-            path: "/javascript/commonjs",
+            title: "执行上下文",
+            path: "/javascript/context",
           },
           {
             title: "Promise",
             path: "/javascript/Promise",
           },
           {
-            title: "JavaScript中的继承",
-            path: "/javascript/inherit",
+            title: "Commonjs",
+            path: "/javascript/commonjs",
           },
           {
-            title: "JavaScript中的执行上下文",
-            path: "/javascript/context",
+            title: "async与defer",
+            path: "/javascript/async-defer",
+          },
+          {
+            title: "0.1+0.2 !== 0.3",
+            path: "/javascript/0.1+0.2",
           },
           {
             title: "ES6解构的本质",
