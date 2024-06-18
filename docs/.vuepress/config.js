@@ -170,9 +170,17 @@ module.exports = {
             path: "/javascript/cache",
           },
           {
-            title: "常用代码片段",
-            path: "/javascript/use-code",
+            title: "requestAnimationFrame",
+            path: "/javascript/requestAnimationFrame",
           },
+          {
+            title: "web worker",
+            path: "/javascript/web-worker",
+          },
+          // {
+          //   title: "常用代码片段",
+          //   path: "/javascript/use-code",
+          // },
         ],
       },
       {
