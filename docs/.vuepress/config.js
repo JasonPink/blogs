@@ -45,6 +45,10 @@ module.exports = {
             path: "/team/git",
           },
           {
+            title: "Git常用命令",
+            path: "/team/git-order",
+          },
+          {
             title: "Vue规范",
             path: "/team/vue",
           },
@@ -78,6 +82,10 @@ module.exports = {
           {
             title: "webpack",
             path: "/project/webpack",
+          },
+          {
+            title: "webpack4配置",
+            path: "/project/webpack4",
           },
           {
             title: "IntersectionObserver",
@@ -146,6 +154,10 @@ module.exports = {
             path: "/javascript/debounce",
           },
           {
+            title: "Web Worker",
+            path: "/javascript/web-worker",
+          },
+          {
             title: "for...in与for...of",
             path: "/javascript/for...in与for...of",
           },
@@ -172,10 +184,6 @@ module.exports = {
           {
             title: "requestAnimationFrame",
             path: "/javascript/requestAnimationFrame",
-          },
-          {
-            title: "web worker",
-            path: "/javascript/web-worker",
           },
           // {
           //   title: "常用代码片段",
