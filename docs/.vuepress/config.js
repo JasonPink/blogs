@@ -88,6 +88,10 @@ module.exports = {
             path: "/project/webpack4",
           },
           {
+            title: "vite",
+            path: "/project/vite",
+          },
+          {
             title: "IntersectionObserver",
             path: "/project/IntersectionObserver",
           },
@@ -210,6 +214,8 @@ module.exports = {
           { title: "v-model原理", path: "/vue/v-model" },
           { title: "nextTick原理", path: "/vue/nextTick" },
           { title: "ref与reactive", path: "/vue/ref与reactive" },
+          { title: "vue2与vue3区别", path: "/vue/difference" },
+          { title: "vue性能优化", path: "/vue/optimize" },
         ],
       },
       {
