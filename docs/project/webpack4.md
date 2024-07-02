@@ -280,3 +280,7 @@ module.exports = {
 };
 
 ```
+
+### 参考文章
+
+[webpack4 配置](https://juejin.cn/post/6859888538004783118?searchId=202406242117369C4C1F4FA2233357CFFF#heading-18)
