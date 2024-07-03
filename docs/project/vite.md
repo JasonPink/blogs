@@ -7,6 +7,44 @@
 
 Vite 的速度优势主要来自于其利用原生 ESM、按需编译、高效的依赖预构建和模块热替换等技术创新，使得在开发环境中的性能远远优于 Webpack。
 
+## gzip 配置
+
+```
+import viteCompression from 'vite-plugin-compression';
+
+plugins:[
+  viteCompression:{
+    verbose: true, // 是否在控制台输出压缩结果
+    filter:/\.(js|mjs|json|css|html)$/i, // 指定哪些资源不被压缩
+    disable: false, // 是否禁用
+    threshold:10240, //如果体积大于阈值，则进行压缩，单位为b
+    ext:.gz, // 后缀
+    algorithm:'' // 压缩算法，可选['gzip'，'brotliCompress'，'deflate'，'deflateRaw']
+    compressionOptions: '', // 对应压缩算法的参数
+    deleteOriginFile:false, // 压缩后是否删除源文件
+  }
+]
+```
+
+## 拆分 bundle
+
+```
+build:{
+  rollupOptions:{
+    sourcemap: false, // 生产环境关闭 sourcemap
+    minify: 'esbuild', // 使用 esbuild 进行代码压缩
+    output:{
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+        manualChunks:{
+          'element-plus': ['element-plus'],
+        }
+    }
+  }
+}
+```
+
 ## vite 常用配置
 
 ```
@@ -48,6 +86,9 @@ export default defineConfig({
           if (id.includes('node_modules')) {
             return id.toString().split('node_modules/')[1].split('/')[0].toString();
           }
+        },
+        manualChunks:{
+          'element-plus': ['element-plus'],
         }
       }
     },

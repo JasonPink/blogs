@@ -88,7 +88,7 @@ module.exports = {
             path: "/project/webpack4",
           },
           {
-            title: "vite",
+            title: "vite常用配置",
             path: "/project/vite",
           },
           {
